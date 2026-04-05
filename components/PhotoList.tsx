@@ -6,8 +6,8 @@ export default function PhotoList({ photos }: PhotoListProps) {
     const typedPhotos = photos.map(({ fields, sys }) => {
         const { description, image, title } =
             fields as unknown as PhotoCardProps;
-        const { id } = sys;
-        return { id, title, description, image };
+        const { id, createdAt } = sys;
+        return { id, title, description, image, createdAt };
     });
     const photoList = typedPhotos.map((photo, i) => (
         <PhotoCard {...photo} key={photo.id} index={i} />
@@ -16,7 +16,7 @@ export default function PhotoList({ photos }: PhotoListProps) {
         photos.length !== 0 ? (
             photoList
         ) : (
-            <NoItemsNotice text="Nenhuma foto postada ainda"/>
+            <NoItemsNotice text="Nenhuma foto postada ainda" />
         );
     return (
         <ul className="p-4 grid lg:grid-cols-4 grid-cols-1 gap-4">

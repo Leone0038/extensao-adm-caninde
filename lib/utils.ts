@@ -33,10 +33,9 @@ export const cleanUrl = (url: string): string => {
     return url.startsWith("//") ? `https:${url}` : url;
 };
 
-export const getPhotos = async (projectName: string) => {
+export const getPhotos = async () => {
     const response = await client.getEntries({
         content_type: "photos",
-        query: projectName,
     });
     return response.items;
 };

@@ -11,6 +11,8 @@ export default function NewsCard({
     image,
     title,
     index,
+    author,
+   createdAt 
 }: NewsCardProps) {
     const imageUrl = cleanUrl(image.fields.file.url);
     return (

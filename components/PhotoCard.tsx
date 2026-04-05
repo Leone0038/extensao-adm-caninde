@@ -9,6 +9,7 @@ export default function PhotoCard({
     image,
     index,
     title,
+    createdAt
 }: PhotoCardProps) {
     const imageUrl = cleanUrl(image.fields.file.url);
     return (

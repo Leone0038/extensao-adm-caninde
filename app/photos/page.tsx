@@ -3,16 +3,13 @@ import Title from "@/components/Title";
 import { getPhotos } from "@/lib/utils";
 
 export default async function PhotosPage() {
-    const financialLiteracyPhotos = await getPhotos(
-        "Alfabetização Financeira e Ciência Cidadã",
-    );
-    const countryFinancingPhotos = await getPhotos("Do Campo às Finanças");
+    const photos = await getPhotos()
     return (
         <main className="page-common-styles">
             <Title text="Projeto - Alfabetização Financeira e Ciência Cidadã - Fotos" />
-            <PhotoList photos={financialLiteracyPhotos} />
+            <PhotoList photos={photos} />
             <Title text="Projeto - Do Campo às Finanças - Fotos" />
-            <PhotoList photos={countryFinancingPhotos} />
+            <PhotoList photos={photos} />
         </main>
     );
 }

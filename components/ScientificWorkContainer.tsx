@@ -3,6 +3,8 @@ import {  ScientificWorkContainerProps } from "@/types";
 
 export default function ScientificWorkContainer({
     scientificWorkPdf,
+    author,
+    createdAt
 }: ScientificWorkContainerProps) {
     const scientificWorkUrl = cleanUrl(scientificWorkPdf.fields.file.url);
     return (

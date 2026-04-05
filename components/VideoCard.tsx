@@ -5,6 +5,7 @@ export default function VideoCard({
     description,
     title,
     video,
+    createdAt
 }: VideoCardProps) {
     const videoUrl = cleanUrl(video.fields.file.url);
     return (
