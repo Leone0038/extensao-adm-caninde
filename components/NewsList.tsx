@@ -1,5 +1,6 @@
 import NewsCard from "@/components/NewsCard";
 import { NewsCardProps, NewsListProps } from "@/types";
+import NoItemsNotice from "./NoItemsNotice";
 
 export default function NewsList({ news }: NewsListProps) {
     const typedNews = news.map(({ fields, sys }) => {
@@ -15,9 +16,7 @@ export default function NewsList({ news }: NewsListProps) {
         news.length !== 0 ? (
             newsList
         ) : (
-            <p className="text-2xl italic text-gray-500">
-                Nenhuma notícia ainda
-            </p>
+            <NoItemsNotice text="Nenhuma notícia postada ainda" />
         );
     return <ul className="flex flex-col gap-4 p-2">{processedNews}</ul>;
 }

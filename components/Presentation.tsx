@@ -1,10 +1,9 @@
-import CommonLink from "./CommonLink";
 
 export default function Presentation() {
     return (
-        <article className="bg-primary p-4 flex flex-col gap-4 items-start rounded">
+        <article className="card-common-styles flex flex-col gap-4">
             <h1 className="text-4xl font-bold">Apresentação</h1>
-            <p>
+            <p className="overflow-y-auto h-60">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 odit at libero voluptatum sed enim eaque ex nostrum, delectus
                 iste eos quaerat velit quos itaque voluptas recusandae, deleniti
@@ -44,7 +43,6 @@ export default function Presentation() {
                 magnam odit id dolorum omnis accusamus animi illum. Quis unde,
                 hic praesentium alias aliquam maiores nesciunt pariatur.
             </p>
-            <CommonLink href="/destaques" label="Destaques" />
         </article>
     );
 }

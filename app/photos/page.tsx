@@ -8,10 +8,10 @@ export default async function PhotosPage() {
     );
     const countryFinancingPhotos = await getPhotos("Do Campo às Finanças");
     return (
-        <main className="flex flex-col gap-4">
-            <Title text="Alfabetização Financeira e Ciência Cidadã" />
+        <main className="page-common-styles">
+            <Title text="Projeto - Alfabetização Financeira e Ciência Cidadã - Fotos" />
             <PhotoList photos={financialLiteracyPhotos} />
-            <Title text="Do Campo às Finanças" />
+            <Title text="Projeto - Do Campo às Finanças - Fotos" />
             <PhotoList photos={countryFinancingPhotos} />
         </main>
     );

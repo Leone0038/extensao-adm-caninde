@@ -1,19 +1,22 @@
-// import CommonLink from "@/components/CommonLink";
+import DashBoard from "@/components/DashBoard";
+import HighLights from "@/components/HighLights";
+import NewsList from "@/components/NewsList";
 import Presentation from "@/components/Presentation";
 import SlideShow from "@/components/SlideShow";
+import Title from "@/components/Title";
+import { getLastestNews } from "@/lib/utils";
 
-export default function Home() {
+export default async function Home() {
+      const news = await getLastestNews();
     return (
-        <main className="flex-1 flex flex-col items-center gap-8 justify-evenly">
+        <main className="flex-1 flex flex-col gap-8 justify-evenly">
             <SlideShow />
-            {/* <div className="flex gap-4">
-                <CommonLink href="/projeto-1" label="Conheça o Projeto - 1" />
-                <CommonLink
-                    href="/cursos-e-oficinas"
-                    label="Inscreva-se nos cursos"
-                />
-            </div> */}
-            <Presentation/>
+            <Presentation />
+            <DashBoard />
+            <Title text="Últimas Notícias" />
+            <NewsList news={news} />
+            <Title text=" Bolsistas em Destaque" />
+            <HighLights />
         </main>
     );
 }

@@ -22,8 +22,7 @@ export default function SearchInterface() {
                 type="search"
                 name="search"
                 id="search"
-                placeholder="Busca"
-                autoFocus
+                placeholder="Buscar notícias"
                 className="placeholder:italic p-4 border-2 shadow border-gray-700 text-black
                  rounded w-full placeholder:text-gray-500"
                 onChange={(e) => handleSearch(e.target.value)}

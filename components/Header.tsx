@@ -10,7 +10,7 @@ import Logo from "./Logo";
 
 export default function Header() {
     return (
-        <header className="bg-primary py-4 px-8 flex justify-between gap-6 items-center xl:flex-row flex-col sticky top-0 z-50 shadow-lg shadow-gray-800">
+        <header className="bg-primary py-4 px-8 flex justify-between gap-6 items-center xl:flex-row flex-col z-50 shadow-sm shadow-gray-800">
             <Logo height={50} width={50} img={logoHeader} />
 
             <div className="flex gap-10 items-center *:shrink-0 xl:flex-row flex-col">

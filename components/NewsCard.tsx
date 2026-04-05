@@ -15,18 +15,20 @@ export default function NewsCard({
     const imageUrl = cleanUrl(image.fields.file.url);
     return (
         <li className="">
-            <article className="bg-primary p-4 rounded flex md:flex-row flex-col gap-3 md:items-start items-center">
+            <article className="card-common-styles flex md:flex-row flex-col gap-3 md:items-start items-center">
                 <Image
                     width={300}
-                    height={100}
+                    height={300}
                     alt={title}
                     src={imageUrl}
                     priority={allowedIndexes.includes(index)}
                     className="rounded object-cover aspect-square w-auto h-auto"
                 />
                 <div className="flex flex-col p-4">
-                    <h1 className={`text-xl mb-4 font-bold`}>{title}</h1>
-                    {documentToReactComponents(description as Document)}
+                    <h2 className='mb-4 h2-common-styles'>{title}</h2>
+                    <div className="overflow-y-auto h-60">
+                        {documentToReactComponents(description as Document)}
+                    </div>
                 </div>
             </article>
         </li>

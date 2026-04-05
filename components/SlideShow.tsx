@@ -24,7 +24,7 @@ export default function SlideShow() {
         };
     }, []);
     return (
-        <section className="overflow-hidden aspect-square shadow-xl shadow-gray-400 border-0 rounded max-w-150 w-full">
+        <section className="self-center overflow-hidden aspect-square shadow-xl shadow-gray-400 border-0 rounded max-w-150 w-full">
             <div
                 className="flex w-full h-full transition duration-500 ease-in-out"
                 style={{

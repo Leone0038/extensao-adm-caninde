@@ -29,6 +29,19 @@ body {
         font-family: var(--font-montserrat), sans-serif;
     }
 
+    .h2-common-styles {
+        @apply text-2xl font-bold;
+    }
+
+    .card-common-styles {
+        @apply p-4 rounded bg-primary shadow-md shadow-gray-600
+    }
+
+   
+    .page-common-styles {
+        @apply flex flex-col gap-6
+    }
+
     p {
         font-family: var(--font-opensans);
     }

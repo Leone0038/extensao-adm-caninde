@@ -12,9 +12,17 @@ const nextConfig: NextConfig = {
                 source: "/noticias",
                 destination: "/news",
             },
-             {
+            {
                 source: "/fotos",
                 destination: "/photos",
+            },
+            {
+                source: "/sobre",
+                destination: "/about",
+            },
+             {
+                source: "/trabalhos-cientificos",
+                destination: "/scientific-works",
             },
         ];
     },

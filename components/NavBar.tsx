@@ -32,7 +32,7 @@ const links: NavLink[] = [
     },
     {
         label: "Sobre / Contato",
-        href: "/sobre-contato",
+        href: "/sobre",
     },
 ];
 

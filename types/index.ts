@@ -46,7 +46,6 @@ export interface PhotoCardProps {
     description: string;
     image: { fields: { file: { url: string } } };
     index: number;
-    projectName: string;
 }
 
 export interface PhotoListProps {
@@ -57,5 +56,23 @@ export interface VideoCardProps {
     title: string;
     description: string;
     video: { fields: { file: { url: string } } };
-    projectName: string;
+}
+
+export interface VideoListProps {
+    videos: Entry<EntrySkeletonType, undefined, string>[];
+}
+
+export interface NoItemsNoticeProps {
+    text: string
+}
+
+export interface AboutInfoCardProps  {
+    children?: React.ReactNode
+    title: string
+}
+export interface ScientificWorkContainerProps {
+    scientificWorkPdf: {fields: {file: {url: string}}}
+}
+export interface ScientificWorkContainerListProps {
+    scientificWorks: Entry<EntrySkeletonType, undefined, string>[];
 }

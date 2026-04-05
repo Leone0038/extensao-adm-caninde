@@ -8,13 +8,13 @@ export default async function DashBoard() {
         impactedMunicipalitiesAmount,
         membersServedAmount,
     } = counter[0].fields as unknown as DashBoardCounter;
-    console.log(counter[0].fields)
+    
     return (
-        <section className="bg-secondary p-4 rounded flex gap-2 justify-around font-bold lg:flex-row flex-col">
+        <section className="bg-secondary p-4 rounded flex gap-4 justify-around items-center font-bold lg:flex-row flex-col">
             <div>
                 <p>
                     Nº de participantes atendidos:{" "}
-                    <span>{membersServedAmount}</span>
+                    <span className="text-shadow">{membersServedAmount}</span>
                 </p>
             </div>
             <div>

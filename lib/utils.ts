@@ -40,3 +40,18 @@ export const getPhotos = async (projectName: string) => {
     });
     return response.items;
 };
+
+export const getVideos = async () => {
+    const response = await client.getEntries({
+        content_type: "vdeos",
+    });
+    return response.items;
+};
+
+export const getScientificWorks = async () => {
+    const response = await client.getEntries({
+        content_type: "scientificWork",
+    });
+
+    return response.items;
+};
