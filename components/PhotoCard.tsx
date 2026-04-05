@@ -15,7 +15,7 @@ export default function PhotoCard({
     const timeAgo = getTimeAgo(createdAt);
     return (
         <li >
-            <article className="card-common-styles flex-col-common-styles">
+            <article className="card-common-styles flex-col-common-styles h-full">
                 <Image
                     width={300}
                     height={100}
@@ -25,7 +25,7 @@ export default function PhotoCard({
                     className="object-contain rounded w-auto h-auto shadow-md shadow-gray-600"
                 />
                 <h2 className="h2-common-styles">{title}</h2>
-                <p>{description}</p>
+                <p className="h-20 overflow-y-auto">{description}</p>
                 <p className="font-bold">{timeAgo}</p>
             </article>
         </li>

@@ -1,4 +1,4 @@
-import logoHeader from "@/assets/logo-footer-1.webp";
+import logoHeader from "@/assets/logo-header-2.webp";
 import NavBar from "./NavBar";
 import Image from "next/image";
 import fbIcon from "@/assets/fb-icon.svg";

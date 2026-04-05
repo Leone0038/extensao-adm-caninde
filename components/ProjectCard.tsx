@@ -30,7 +30,7 @@ export default function ProjectCard({
                                 <a
                                     href={url}
                                     target="_blank"
-                                    className="underline"
+                                    className="underline wrap-break-word"
                                 >
                                     {url}
                                 </a>

@@ -13,7 +13,7 @@ export default function CourseCard({
     const imageUrl = cleanUrl(image.fields.file.url);
     return (
         <li>
-            <article className="card-common-styles flex flex-col gap-2">
+            <article className="card-common-styles flex flex-col gap-2 h-full">
                 <Image
                     width={300}
                     height={100}
@@ -23,7 +23,7 @@ export default function CourseCard({
                     className="object-cover aspect-square rounded w-auto h-auto"
                 />
                 <h2 className="h2-common-styles">{courseName}</h2>
-                <p>{description}</p>
+                <p className="h-20 overflow-y-auto">{description}</p>
             </article>
         </li>
     );

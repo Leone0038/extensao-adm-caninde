@@ -6,9 +6,9 @@ export default function TopScholarshipRecipientCard({
 }: TopScholarshipRecipientCardProps) {
     return (
         <li>
-            <article className="card-common-styles flex flex-col justify-center gap-4">
+            <article className="card-common-styles flex flex-col gap-4 h-full">
                 <h2 className="h2-common-styles">{name}</h2>
-                <p>{description}</p>
+                <p className="">{description}</p>
             </article>
         </li>
     );
