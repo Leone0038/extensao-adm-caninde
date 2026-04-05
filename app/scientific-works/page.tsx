@@ -5,7 +5,7 @@ import { getScientificWorks } from "@/lib/utils";
 export default async function ScientificWorksPage() {
     const scientificWorks = await getScientificWorks();
     return (
-        <main className="flex-1 flex flex-col gap-4">
+        <main className="page-common-styles">
             <Title text="Trabalhos Científicos" />
             <ScientificWorkContainerList scientificWorks={scientificWorks} />
         </main>

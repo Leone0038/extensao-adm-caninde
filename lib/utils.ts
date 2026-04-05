@@ -1,5 +1,7 @@
 import { client } from "@/lib/contentful";
 import { FilterType } from "@/types";
+import { formatDistanceToNow } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 export const getNews = async (
     search: string = "",
@@ -50,6 +52,46 @@ export const getVideos = async () => {
 export const getScientificWorks = async () => {
     const response = await client.getEntries({
         content_type: "scientificWork",
+    });
+
+    return response.items;
+};
+
+export const getTimeAgo = (createdAt: string) => {
+    return formatDistanceToNow(createdAt, {
+        addSuffix: true,
+        locale: ptBR,
+    });
+};
+
+export const getProjects = async () => {
+    const response = await client.getEntries({
+        content_type: "project",
+    });
+
+    return response.items;
+};
+
+
+export const getCourses = async () => {
+    const response = await client.getEntries({
+        content_type: "course",
+    });
+
+    return response.items;
+};
+
+export const getWorkShops = async () => {
+    const response = await client.getEntries({
+        content_type: "workshop",
+    });
+
+    return response.items;
+};
+
+export const getTopScholarshipRecipients = async () => {
+    const response = await client.getEntries({
+        content_type: "topScholarshipRecipient",
     });
 
     return response.items;

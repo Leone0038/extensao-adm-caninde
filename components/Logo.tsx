@@ -9,7 +9,7 @@ export default function Logo({ img, width, height }: LogoProps) {
             priority
             width={width}
             height={height}
-            className="w-auto h-auto"
+            className="w-auto h-auto shrink-0"
         />
     );
 }

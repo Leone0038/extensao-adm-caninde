@@ -18,7 +18,7 @@ export default function VideoList({ videos }: VideoListProps) {
         ) : (
             <NoItemsNotice text="Nenhum vídeo postado ainda"/>
         );
-    return <ul className="p-4 grid md:grid-cols-4 grid-cols-1 gap-4">
+    return <ul className="grid-common-styles">
         {processedVideos}
     </ul>;
 }

@@ -2,7 +2,7 @@ import logoFooter from "@/assets/logo-footer.webp";
 import Logo from "./Logo";
 export default function Footer() {
     return (
-        <footer className="bg-tertiary p-4 flex md:flex-row flex-col justify-around gap-4 items-center text-primary text-start">
+        <footer className="bg-tertiary p-4 flex lg:flex-row flex-col justify-around gap-4 items-center text-primary lg:text-start text-center">
             <div>
                 <Logo height={200} width={200} img={logoFooter} />
             </div>

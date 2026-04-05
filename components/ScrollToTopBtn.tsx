@@ -28,7 +28,7 @@ export default function ScrollToTopBtn() {
     return (
         <button
             type="button"
-            className="shadow cursor-pointer fixed bottom-3 right-3 p-3 rounded-full bg-secondary grid place-content-center"
+            className="shadow cursor-pointer fixed bottom-5 right-5 p-3 rounded-full bg-secondary grid place-content-center"
             onClick={scrollToTop}
         >
             <Image

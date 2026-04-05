@@ -2,7 +2,7 @@ import AboutInfoCard from "@/components/AboutInfoCard";
 
 export default function AboutPage() {
     return (
-        <main className="flex-1 flex flex-col gap-4 items-center">
+        <main className="flex-1 page-common-styles items-center">
             <AboutInfoCard title="Quem somos?">
                 <a
                     href="https://www.instagram.com/alfacidada?igsh=aHJvcXdmZWIzNmNm&utm_source=qr"

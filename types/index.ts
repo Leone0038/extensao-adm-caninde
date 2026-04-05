@@ -15,11 +15,11 @@ export interface LogoProps {
 
 export interface NewsCardProps {
     title: string;
-    description: Document | string;
+    description: Document;
     image: { fields: { file: { url: string } } };
     index: number;
-    author: string
-    createdAt: string
+    author: string;
+    createdAt: string;
 }
 
 export interface NewsListProps {
@@ -34,7 +34,7 @@ export interface NewsPageSearchParams {
 
 export interface TitleProps {
     text: string;
-    styles?: string;
+    align?: string;
 }
 
 export interface DashBoardCounter {
@@ -48,7 +48,7 @@ export interface PhotoCardProps {
     description: string;
     image: { fields: { file: { url: string } } };
     index: number;
-    createdAt: string
+    createdAt: string;
 }
 
 export interface PhotoListProps {
@@ -59,7 +59,7 @@ export interface VideoCardProps {
     title: string;
     description: string;
     video: { fields: { file: { url: string } } };
-    createdAt: string
+    createdAt: string;
 }
 
 export interface VideoListProps {
@@ -67,19 +67,62 @@ export interface VideoListProps {
 }
 
 export interface NoItemsNoticeProps {
-    text: string
+    text: string;
 }
 
-export interface AboutInfoCardProps  {
-    children?: React.ReactNode
-    title: string
+export interface AboutInfoCardProps {
+    children?: React.ReactNode;
+    title: string;
 }
 export interface ScientificWorkContainerProps {
-    scientificWorkPdf: {fields: {file: {url: string}}}
+    scientificWorkFile: { fields: { file: { url: string } } };
     author: string;
-    createdAt: string
-    description: string
+    createdAt: string;
+    description: string;
 }
 export interface ScientificWorkContainerListProps {
     scientificWorks: Entry<EntrySkeletonType, undefined, string>[];
+}
+
+export interface ProjectCardProps {
+    title: string;
+    description: Document;
+    createdAt: string;
+    material: { fields: { file: { url: string } } }[];
+}
+export interface ProjectCardListProps {
+    projects: Entry<EntrySkeletonType, undefined, string>[];
+}
+
+export interface CourseCardProps {
+    courseName: string;
+    description: string;
+    image: { fields: { file: { url: string } } };
+    index: number;
+}
+
+export interface CourseCardListProps {
+    courses: Entry<EntrySkeletonType, undefined, string>[];
+}
+
+export interface WorkShopCardProps {
+    workshopName: string;
+    description: string;
+    image: { fields: { file: { url: string } } };
+    index: number;
+}
+
+export interface WorkShopCardListProps {
+    workshops: Entry<EntrySkeletonType, undefined, string>[];
+}
+
+
+
+export interface TopScholarshipRecipientCardProps {
+    name: string;
+    description: string;
+}
+
+export interface TopScholarshipRecipientCardListProps {
+    topScholarshipRecipients: Entry<EntrySkeletonType, undefined, string>[];
 }

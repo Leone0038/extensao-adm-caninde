@@ -24,6 +24,14 @@ const nextConfig: NextConfig = {
                 source: "/trabalhos-cientificos",
                 destination: "/scientific-works",
             },
+             {
+                source: "/projetos",
+                destination: "/projects",
+            },
+             {
+                source: "/cursos-e-oficinas",
+                destination: "/courses-and-workshops",
+            },
         ];
     },
     images: {

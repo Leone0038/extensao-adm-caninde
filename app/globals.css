@@ -37,6 +37,12 @@ body {
         @apply p-4 rounded bg-primary shadow-md shadow-gray-600
     }
 
+    .grid-common-styles {
+        @apply p-4 grid xl:grid-cols-4 gap-12 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1
+    }
+    .flex-col-common-styles {
+        @apply flex flex-col gap-4 items-center text-center
+    }
    
     .page-common-styles {
         @apply flex flex-col gap-6

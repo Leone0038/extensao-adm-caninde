@@ -1,31 +1,33 @@
-import { cleanUrl } from "@/lib/utils";
-import {  ScientificWorkContainerProps } from "@/types";
+import { cleanUrl, getTimeAgo } from "@/lib/utils";
+import { ScientificWorkContainerProps } from "@/types";
 
 export default function ScientificWorkContainer({
-    scientificWorkPdf,
+    scientificWorkFile,
     author,
-    createdAt
+    createdAt,
+    description,
 }: ScientificWorkContainerProps) {
-    const scientificWorkUrl = cleanUrl(scientificWorkPdf.fields.file.url);
+    const scientificWorkUrl = cleanUrl(scientificWorkFile.fields.file.url);
+    const timeAgo = getTimeAgo(createdAt);
     return (
         <li>
-            <object
-                data={scientificWorkUrl}
-                type="application/pdf"
-                width="100%"
-                height="800px"
-            >
-                <p className="p-4 bg-gray-100 rounded">
-                    Seu navegador não consegue exibir o PDF.
+            <article className="card-common-styles flex flex-col gap-4 justify-between">
+                <p>
+                    <span className="font-bold">Link: </span>
                     <a
                         href={scientificWorkUrl}
-                        className="text-blue-600 underline"
+                        target="_blank"
+                        className="underline wrap-break-word"
                     >
-                        {" "}
-                        Clique aqui para baixar.
+                        {scientificWorkUrl}
                     </a>
                 </p>
-            </object>
+                <p>
+                    <span className="font-bold">Autor</span> - {author}
+                </p>
+                <p >{description}</p>
+                <p className="font-bold">{timeAgo}</p>
+            </article>
         </li>
     );
 }

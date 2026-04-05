@@ -19,7 +19,7 @@ export default function PhotoList({ photos }: PhotoListProps) {
             <NoItemsNotice text="Nenhuma foto postada ainda" />
         );
     return (
-        <ul className="p-4 grid lg:grid-cols-4 grid-cols-1 gap-4">
+        <ul className="grid-common-styles">
             {processedPhotos}
         </ul>
     );
