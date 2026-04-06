@@ -22,7 +22,7 @@ export default function Pagination({
             breakLabel="..."
             nextLabel="Próxima >"
             onPageChange={handlePageClick}
-            pageCount={20}
+            pageCount={totalPages}
             pageRangeDisplayed={2}
             marginPagesDisplayed={1}
             previousLabel="< Anterior"
