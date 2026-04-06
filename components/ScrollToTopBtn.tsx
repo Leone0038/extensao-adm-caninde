@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import upArrow from "@/assets/up-arrow.svg";
 import { useEffect, useState } from "react";
 
 const scrollToTop = () => {
-    scrollTo({ top: 0, behavior: "smooth" });
+    scrollTo({ top: 0 });
 };
 
 export default function ScrollToTopBtn() {
@@ -30,6 +30,11 @@ export default function ScrollToTopBtn() {
             type="button"
             className="shadow cursor-pointer fixed bottom-5 right-5 p-3 rounded-full bg-secondary grid place-content-center"
             onClick={scrollToTop}
+            style={{
+                touchAction: "none",
+                pointerEvents: "auto",
+                WebkitAppearance: "none",
+            }}
         >
             <Image
                 width={40}

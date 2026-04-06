@@ -20,15 +20,15 @@ const nextConfig: NextConfig = {
                 source: "/sobre",
                 destination: "/about",
             },
-             {
+            {
                 source: "/trabalhos-cientificos",
                 destination: "/scientific-works",
             },
-             {
+            {
                 source: "/projetos",
                 destination: "/projects",
             },
-             {
+            {
                 source: "/cursos-e-oficinas",
                 destination: "/courses-and-workshops",
             },
@@ -42,6 +42,10 @@ const nextConfig: NextConfig = {
             },
         ],
     },
+    allowedDevOrigins:
+        process.env.NODE_ENV === "development"
+            ? [process.env.ALLOWED_DEV_ORIGIN!]
+            : [],
 };
 
 export default nextConfig;

@@ -10,7 +10,7 @@ export default async function DashBoard() {
     } = counter[0].fields as unknown as DashBoardCounter;
     
     return (
-        <section className="bg-secondary p-4 rounded flex gap-4 justify-around items-center font-bold lg:flex-row flex-col">
+        <section className="bg-secondary p-4 rounded flex gap-4 lg:justify-around items-start font-bold lg:flex-row flex-col">
             <div>
                 <p>
                     Nº de participantes atendidos:{" "}

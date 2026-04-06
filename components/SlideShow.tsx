@@ -38,7 +38,7 @@ export default function SlideShow() {
                             fill
                             src={img}
                             alt={`Imagem do carrosel - ${i + 1}`}
-                            priority={i === 0}
+                            priority={i === 0 || i === 1}
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw"
                         />

@@ -27,12 +27,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-BR" className={`h-full antialiased`}>
-            <body className="min-h-full flex flex-col justify-between text-white leading-normal">
+        <html lang="pt-BR" className="scroll-smooth antialiased">
+            <body className="min-h-dvh flex flex-col justify-between text-white leading-normal">
                 <Header />
                 <main className="flex-1 flex p-8">{children}</main>
                 <Footer />
-                <ScrollToTopBtn/>
+                <ScrollToTopBtn />
             </body>
         </html>
     );
