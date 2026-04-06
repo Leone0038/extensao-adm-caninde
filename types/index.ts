@@ -15,7 +15,7 @@ export interface LogoProps {
 
 export interface NewsCardProps {
     title: string;
-    description: Document;
+    newsText: Document;
     image: { fields: { file: { url: string } } };
     index: number;
     author: string;
@@ -29,7 +29,7 @@ export interface NewsListProps {
 export type FilterType = "latest" | "oldest";
 
 export interface NewsPageSearchParams {
-    searchParams: Promise<{ search: string; filter: FilterType }>;
+    searchParams: Promise<{ search: string; filter: FilterType ; page: number}>;
 }
 
 export interface TitleProps {
@@ -125,4 +125,9 @@ export interface TopScholarshipRecipientCardProps {
 
 export interface TopScholarshipRecipientCardListProps {
     topScholarshipRecipients: Entry<EntrySkeletonType, undefined, string>[];
+}
+
+export interface PaginationProps {
+    totalPages: number;
+    currentPage: number
 }

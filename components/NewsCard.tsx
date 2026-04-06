@@ -1,14 +1,13 @@
 import { cleanUrl, getTimeAgo } from "@/lib/utils";
 import { NewsCardProps } from "@/types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { Document } from "@contentful/rich-text-types";
 
 import Image from "next/image";
 
 const allowedIndexes = [0, 1, 2, 3, 4];
 
 export default function NewsCard({
-    description,
+    newsText,
     image,
     title,
     index,
@@ -37,7 +36,7 @@ export default function NewsCard({
                     </p>
                     <p className="font-bold">{timeAgo}</p>
                     <div className="overflow-y-auto h-50">
-                        {documentToReactComponents(description as Document)}
+                        {documentToReactComponents(newsText)}
                     </div>
                 </div>
             </article>

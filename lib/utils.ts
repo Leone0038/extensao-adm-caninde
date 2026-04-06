@@ -6,13 +6,17 @@ import { ptBR } from "date-fns/locale";
 export const getNews = async (
     search: string = "",
     filter: FilterType = "latest",
+    limit: number,
+    currentPage: number,
 ) => {
     const response = await client.getEntries({
         content_type: "news",
         query: search,
         order: [filter === "latest" ? "-sys.createdAt" : "sys.createdAt"],
+        limit,
+        skip: (currentPage - 1) * limit,
     });
-    return response.items;
+    return { news: response.items, total: response.total };
 };
 
 export const getLastestNews = async () => {
@@ -71,7 +75,6 @@ export const getProjects = async () => {
 
     return response.items;
 };
-
 
 export const getCourses = async () => {
     const response = await client.getEntries({

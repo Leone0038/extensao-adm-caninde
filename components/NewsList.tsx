@@ -4,13 +4,13 @@ import NoItemsNotice from "./NoItemsNotice";
 
 export default function NewsList({ news }: NewsListProps) {
     const typedNews = news.map(({ fields, sys }) => {
-        const { description, image, title, author } =
+        const { newsText, image, title, author } =
             fields as unknown as NewsCardProps;
         const { id ,createdAt} = sys;
         return {
             id,
             title,
-            description,
+            newsText,
             image,
             author,
             createdAt,

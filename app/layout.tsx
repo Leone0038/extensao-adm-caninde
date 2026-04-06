@@ -27,7 +27,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-BR" className="scroll-smooth antialiased">
+        <html
+            lang="pt-BR"
+            className="scroll-smooth antialiased"
+            data-scroll-behavior="smooth"
+        >
             <body className="min-h-dvh flex flex-col justify-between text-white leading-normal">
                 <Header />
                 <main className="flex-1 flex p-8">{children}</main>

@@ -12,7 +12,7 @@ const links: NavLink[] = [
     },
     {
         label: "Fotografias",
-        href: "/fotos",
+        href: "/fotografias",
     },
     {
         label: "Vídeos",
