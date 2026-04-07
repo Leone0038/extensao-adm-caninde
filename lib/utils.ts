@@ -1,5 +1,5 @@
 import { client } from "@/lib/contentful";
-import { FilterType } from "@/types";
+import { FilterType, Project } from "@/types";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
@@ -74,6 +74,12 @@ export const getProjects = async () => {
     });
 
     return response.items;
+};
+
+export const getSingleProject = async (id: string) => {
+    const response = await client.getEntry(id);
+
+    return response.fields as unknown as Promise<Project>;
 };
 
 export const getCourses = async () => {

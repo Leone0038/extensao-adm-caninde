@@ -1,7 +1,4 @@
-import {
-    ScientificWorkContainerListProps,
-    ScientificWorkContainerProps,
-} from "@/types";
+import { ScientificWorkContainerListProps } from "@/types";
 
 import NoItemsNotice from "./NoItemsNotice";
 import ScientificWorkContainer from "./ScientificWorkContainer";
@@ -9,14 +6,11 @@ import ScientificWorkContainer from "./ScientificWorkContainer";
 export default function ScientificWorkContainerList({
     scientificWorks,
 }: ScientificWorkContainerListProps) {
-    const typedScientificWorks = scientificWorks.map(({ fields, sys }) => {
-        const { scientificWorkFile, author, description } =
-            fields as unknown as ScientificWorkContainerProps;
-        const { id, createdAt } = sys;
-        return { id, scientificWorkFile, createdAt, author , description};
-    });
-    const scientificWorkList = typedScientificWorks.map((scientificWork) => (
-        <ScientificWorkContainer {...scientificWork} key={scientificWork.id} />
+    const scientificWorkList = scientificWorks.map((scientificWork, i) => (
+        <ScientificWorkContainer
+            scientificWorkUrl={scientificWork.fields.file.url}
+            key={i}
+        />
     ));
     const processesedScientificWorks =
         scientificWorks.length !== 0 ? (

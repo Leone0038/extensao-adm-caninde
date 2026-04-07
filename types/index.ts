@@ -29,7 +29,7 @@ export interface NewsListProps {
 export type FilterType = "latest" | "oldest";
 
 export interface NewsPageSearchParams {
-    searchParams: Promise<{ search: string; filter: FilterType ; page: number}>;
+    searchParams: Promise<{ search: string; filter: FilterType; page: number }>;
 }
 
 export interface TitleProps {
@@ -44,26 +44,20 @@ export interface DashBoardCounter {
 }
 
 export interface PhotoCardProps {
-    title: string;
-    description: string;
-    image: { fields: { file: { url: string } } };
-    index: number;
-    createdAt: string;
+    photoUrl: string
+    index: number
 }
 
 export interface PhotoListProps {
-    photos: Entry<EntrySkeletonType, undefined, string>[];
+    photos: { fields: { file: { url: string } } }[];
 }
 
 export interface VideoCardProps {
-    title: string;
-    description: string;
-    video: { fields: { file: { url: string } } };
-    createdAt: string;
+    videoUrl: string;
 }
 
 export interface VideoListProps {
-    videos: Entry<EntrySkeletonType, undefined, string>[];
+    videos: { fields: { file: { url: string } } }[];
 }
 
 export interface NoItemsNoticeProps {
@@ -75,23 +69,42 @@ export interface AboutInfoCardProps {
     title: string;
 }
 export interface ScientificWorkContainerProps {
-    scientificWorkFile: { fields: { file: { url: string } } };
-    author: string;
-    createdAt: string;
-    description: string;
+    scientificWorkUrl: string;
 }
 export interface ScientificWorkContainerListProps {
-    scientificWorks: Entry<EntrySkeletonType, undefined, string>[];
+    scientificWorks: { fields: { file: { url: string } } }[];
 }
 
-export interface ProjectCardProps {
+export interface Project {
     title: string;
-    description: Document;
-    createdAt: string;
-    material: { fields: { file: { url: string } } }[];
+    summary: Document;
+    bursers: Document;
+    coordinator: string;
+    year: number;
+    photos: { fields: { file: { url: string } } }[];
+    videos: { fields: { file: { url: string } } }[];
+    scientificWorks: { fields: { file: { url: string } } }[];
+    results: { fields: { file: { url: string } } }[];
 }
 export interface ProjectCardListProps {
     projects: Entry<EntrySkeletonType, undefined, string>[];
+}
+
+export interface ProjectTitle {
+    title: string;
+    id: string;
+}
+
+export interface SingleProjectPageParams {
+    params: Promise<{ id: string }>;
+}
+
+export interface ProjectResultCardProps {
+    resultUrl: string
+}
+
+export interface ProjectResultCardListProps {
+    results: {fields: {file: {url: string}}}[]
 }
 
 export interface CourseCardProps {
@@ -116,8 +129,6 @@ export interface WorkShopCardListProps {
     workshops: Entry<EntrySkeletonType, undefined, string>[];
 }
 
-
-
 export interface TopScholarshipRecipientCardProps {
     name: string;
     description: string;
@@ -129,5 +140,5 @@ export interface TopScholarshipRecipientCardListProps {
 
 export interface PaginationProps {
     totalPages: number;
-    currentPage: number
+    currentPage: number;
 }

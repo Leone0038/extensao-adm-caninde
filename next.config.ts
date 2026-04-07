@@ -25,8 +25,8 @@ const nextConfig: NextConfig = {
                 destination: "/scientific-works",
             },
             {
-                source: "/projetos",
-                destination: "/projects",
+                source: "/projetos/:id",
+                destination: "/projects/:id",
             },
             {
                 source: "/cursos-e-oficinas",

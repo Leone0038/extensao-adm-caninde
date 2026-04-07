@@ -34,7 +34,7 @@ body {
     }
 
     .card-common-styles {
-        @apply p-4 rounded bg-primary shadow-md shadow-gray-600;
+        @apply p-4 rounded bg-primary shadow-md shadow-gray-800;
     }
 
     .grid-common-styles {

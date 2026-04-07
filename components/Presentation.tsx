@@ -1,9 +1,10 @@
+import Title from "./Title";
 
 export default function Presentation() {
     return (
-        <article className="card-common-styles flex flex-col gap-4">
-            <h1 className="text-4xl font-bold">Apresentação</h1>
-            <p className="overflow-y-auto h-60">
+        <article className="flex flex-col gap-4 col-span-2 border-b border-gray-400">
+            <Title text="Apresentação" />
+            <p className="pb-10">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 odit at libero voluptatum sed enim eaque ex nostrum, delectus
                 iste eos quaerat velit quos itaque voluptas recusandae, deleniti

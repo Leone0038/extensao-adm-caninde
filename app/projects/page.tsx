@@ -1,4 +1,4 @@
-import ProjectCardList from "@/components/ProjectCardList";
+import ProjectCardList from "@/components/ProjectResultCardList";
 import Title from "@/components/Title";
 import { getProjects } from "@/lib/utils";
 
