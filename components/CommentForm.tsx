@@ -18,7 +18,7 @@ const SubmitBtn = () => {
     );
 };
 const inputStyles =
-    "p-2 border rounded placeholder:text-gray-500 placeholder:italic bg-white text-black";
+    "p-2 border rounded placeholder:text-gray-500 placeholder:italic bg-white text-black w-full min-w-0";
 
 const initialState: InitialStateType = {
     message: null,
@@ -37,7 +37,7 @@ export default function CommentForm() {
     }, [state.message, state.errorMessage]);
 
     return (
-        <form action={formAction} className="flex flex-col gap-4">
+        <form action={formAction} className="flex flex-col gap-4 w-full">
             <input
                 type="text"
                 name="title"

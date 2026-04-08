@@ -35,7 +35,7 @@ export default function RootLayout({
         >
             <body className="min-h-dvh flex flex-col justify-between text-white leading-normal bg-neutral-900">
                 <Header />
-                <main className="flex-1 flex p-20">
+                <main className="flex-1 flex lg:p-20 p-10">
                     <Providers>{children}</Providers>
                 </main>
                 <Footer />

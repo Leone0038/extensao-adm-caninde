@@ -34,7 +34,6 @@ export default async function SingleProjectPage({
         results,
         scientificWorks,
         videos,
-        year,
     } = await getSingleProject(id);
 
     return (
@@ -42,7 +41,7 @@ export default async function SingleProjectPage({
             <CommonLink
                 href="/"
                 label="Início"
-                styles="self-center mb-10 w-20 text-2xl"
+                styles="self-center mb-10 w-30 text-2xl "
             />
             <Title text={title} />
             <p className="p-4">

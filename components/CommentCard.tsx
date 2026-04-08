@@ -13,18 +13,22 @@ export default function CommentCard({
     const timeAgo = getTimeAgo(createdAt.toString());
     return (
         <li>
-            <article className="border-b flex gap-4 p-2">
+            <article className="border-b flex sm:flex-row flex-col gap-4 p-2">
                 <Image
-                    width={40}
-                    height={40}
+                    width={48}
+                    height={48}
                     alt="Comentário"
                     src={commentIcon}
-                    className="w-15 h-15 self-start"
+                    className="w-12 h-12 shrink-0 self-start"
                     priority={allowedIndexes.includes(index)}
                 />
-                <div className="flex flex-col gap-4 px-4">
-                    <h2 className="h2-common-styles">{title}</h2>
-                    <p className="p-2">{comment}</p>
+                <div className="flex flex-col gap-4 px-4 min-w-0 w-full overflow-hidden">
+                    <h2 className="h2-common-styles break-all sm:wrap-break-word">
+                        {title}
+                    </h2>
+                    <p className="p-2 break-all sm:wrap-break-word whitespace-pre-wrap">
+                        {comment}
+                    </p>
                     <p className="font-bold italic">{timeAgo}</p>
                 </div>
             </article>
