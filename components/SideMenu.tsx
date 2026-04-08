@@ -18,36 +18,23 @@ export default async function SideMenu() {
     });
 
     return (
-        <nav className="p-4 rounded overflow-y-auto h-120 pt-10">
-            <ul className="cursor-pointer *:mb-4">
-                <li>
-                    <details className="bg-secondary p-2">
-                        <summary>Projetos de Extensão 2025</summary>
-                        <ul className="list-disc list-inside p-2 *:my-4 underline">
-                            {projects2025.map(({ id, title }) => (
-                                <li key={id}>
-                                    <Link href={`/projetos/${id}`} >
-                                    {title}
-                                </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </details>
-                </li>
-                <li>
-                    <details className="bg-secondary p-2">
-                        <summary>Projetos de Extensão 2026</summary>
-                        <ul className="list-disc list-inside p-2 *:my-4 underline">
-                             {projects2026.map(({ id, title }) => (
-                                <li key={id}>
-                                    <Link href={`/projetos/${id}`} >
-                                    {title}
-                                </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </details>
-                </li>
+        <nav className="p-4 border-l border-gray-500 select-none">
+            <h2 className="font-bold">Projetos de Extensão 2025</h2>
+            <ul className="list-disc list-inside p-2 *:my-4 underline">
+                {projects2025.map(({ id, title }) => (
+                    <li key={id}>
+                        <Link href={`/projetos/${id}`}>{title}</Link>
+                    </li>
+                ))}
+            </ul>
+            <h2 className="font-bold">Projetos de Extensão 2026</h2>
+
+            <ul className="list-disc list-inside p-2 *:my-4 underline">
+                {projects2026.map(({ id, title }) => (
+                    <li key={id}>
+                        <Link href={`/projetos/${id}`}>{title}</Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );

@@ -1,9 +1,11 @@
-import Title from "./Title";
+import Logo from "./Logo";
+import projectsLogo from '@/assets/projects-logo.webp'
+
 
 export default function Presentation() {
     return (
-        <article className="flex flex-col gap-4 col-span-2 border-b border-gray-400">
-            <Title text="Apresentação" />
+        <article className="flex flex-col gap-4 col-span-2 p-8">
+         
             <p className="pb-10">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 odit at libero voluptatum sed enim eaque ex nostrum, delectus
@@ -44,6 +46,12 @@ export default function Presentation() {
                 magnam odit id dolorum omnis accusamus animi illum. Quis unde,
                 hic praesentium alias aliquam maiores nesciunt pariatur.
             </p>
+            <Logo
+                width={500}
+                height={500}
+                img={projectsLogo}
+                priority={false}
+            />
         </article>
     );
 }

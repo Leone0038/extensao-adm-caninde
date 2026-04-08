@@ -2,15 +2,42 @@ import { Document } from "@contentful/rich-text-types";
 import { Entry, EntrySkeletonType } from "contentful";
 import { StaticImageData } from "next/image";
 
+export interface SocialMediaLinks {
+    icon: string;
+    href: string;
+    alt: string
+}
+
+export interface CommentCardProps {
+    title: string;
+    comment: string;
+    index: number;
+    createdAt: Date;
+}
+
+export interface CommentCardListProps {
+    comments: Entry<EntrySkeletonType, undefined, string>[];
+}
+
+export type MessageType = "add-comment-success" | "add-comment-error";
+
+export interface InitialStateType {
+    message: MessageType | null;
+    errorMessage?: string;
+}
+
 export interface NavLink {
     label: string;
     href: string;
+    styles?: string;
 }
 
 export interface LogoProps {
     img: StaticImageData;
     width: number;
     height: number;
+    priority: boolean;
+    styles?: string;
 }
 
 export interface NewsCardProps {
@@ -34,7 +61,7 @@ export interface NewsPageSearchParams {
 
 export interface TitleProps {
     text: string;
-    align?: string;
+    styles?: string;
 }
 
 export interface DashBoardCounter {
@@ -44,8 +71,8 @@ export interface DashBoardCounter {
 }
 
 export interface PhotoCardProps {
-    photoUrl: string
-    index: number
+    photoUrl: string;
+    index: number;
 }
 
 export interface PhotoListProps {
@@ -100,11 +127,11 @@ export interface SingleProjectPageParams {
 }
 
 export interface ProjectResultCardProps {
-    resultUrl: string
+    resultUrl: string;
 }
 
 export interface ProjectResultCardListProps {
-    results: {fields: {file: {url: string}}}[]
+    results: { fields: { file: { url: string } } }[];
 }
 
 export interface CourseCardProps {

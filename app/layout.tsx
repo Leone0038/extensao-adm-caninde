@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Montserrat, Open_Sans } from "next/font/google";
 import ScrollToTopBtn from "@/components/ScrollToTopBtn";
+import Providers from "./providers";
 
 export const montserrat = Montserrat({
     subsets: ["latin"],
@@ -34,7 +35,9 @@ export default function RootLayout({
         >
             <body className="min-h-dvh flex flex-col justify-between text-white leading-normal bg-neutral-900">
                 <Header />
-                <main className="flex-1 flex p-20">{children}</main>
+                <main className="flex-1 flex p-20">
+                    <Providers>{children}</Providers>
+                </main>
                 <Footer />
                 <ScrollToTopBtn />
             </body>

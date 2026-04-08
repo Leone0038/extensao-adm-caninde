@@ -3,6 +3,7 @@ import { FilterType, Project } from "@/types";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
+
 export const getNews = async (
     search: string = "",
     filter: FilterType = "latest",
