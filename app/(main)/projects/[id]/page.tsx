@@ -37,7 +37,7 @@ export default async function SingleProjectPage({
     } = await getSingleProject(id);
 
     return (
-        <main className="flex gap-8 flex-col sm:items-start items-center">
+        <main className="flex gap-8 flex-col sm:items-start items-center lg:p-16 px-4 py-8">
             <CommonLink
                 href="/"
                 label="Voltar"

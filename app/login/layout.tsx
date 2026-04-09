@@ -10,5 +10,5 @@ export default function LoginPageLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <main className="bg-mauve-800 absolute inset-0 z-50 flex justify-center pt-20">{children}</main>;
+    return <main className="bg-mauve-800 flex justify-center pt-20">{children}</main>;
 }

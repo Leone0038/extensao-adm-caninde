@@ -1,3 +1,4 @@
+import ScrollToTopBtn from "@/components/ScrollToTopBtn";
 import { Toaster } from "react-hot-toast";
 
 export default function Providers({
@@ -6,6 +7,7 @@ export default function Providers({
     return (
         <>
             <Toaster />
+            <ScrollToTopBtn />
             {children}
         </>
     );

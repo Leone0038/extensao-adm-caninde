@@ -47,7 +47,11 @@ export default function SlideShow({ photoIndex, photos }: SlideShowProps) {
                         src={arrowBackward}
                     />
                 </button>
-                <button type="button" onClick={nextPhoto}    className={`${currentPhotoIndex === photos.length-1 && "invisible"}`}>
+                <button
+                    type="button"
+                    onClick={nextPhoto}
+                    className={`${currentPhotoIndex === photos.length - 1 && "invisible"}`}
+                >
                     <Image
                         width={100}
                         height={100}

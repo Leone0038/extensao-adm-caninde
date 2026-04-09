@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Montserrat, Open_Sans } from "next/font/google";
-import ScrollToTopBtn from "@/components/ScrollToTopBtn";
 import Providers from "./providers";
 
 export const montserrat = Montserrat({
@@ -33,13 +30,8 @@ export default function RootLayout({
             className="scroll-smooth antialiased"
             data-scroll-behavior="smooth"
         >
-            <body className="min-h-dvh flex flex-col justify-between text-white leading-normal bg-neutral-900">
-                <Header />
-                <main className="flex-1 flex lg:p-16 px-4 py-8">
-                    <Providers>{children}</Providers>
-                </main>
-                <Footer />
-                <ScrollToTopBtn />
+            <body className="text-white leading-normal bg-neutral-900">
+                <Providers>{children}</Providers>
             </body>
         </html>
     );

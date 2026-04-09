@@ -13,7 +13,7 @@ export default async function PhotosPage({
     return (
         <main className="flex-1 flex flex-col items-center">
             <CommonLink
-                href={`/projects/${id}`}
+                href={`/projects/${id}#${id}`}
                 label="Voltar"
                 styles="self-center mb-10 w-30 text-xl"
             />
