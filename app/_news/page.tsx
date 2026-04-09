@@ -21,7 +21,7 @@ export default async function NewsPage({ searchParams }: NewsPageSearchParams) {
         <main className="page-common-styles flex-1">
             <SearchInterface />
             <div className="flex sm:flex-row flex-col justify-between gap-4">
-                <Title text="Notícias" align="center" />
+                <Title text="Notícias" />
                 <Filter />
             </div>
             <NewsList news={news} />
