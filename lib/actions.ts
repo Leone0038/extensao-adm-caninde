@@ -18,6 +18,14 @@ export const postComment = async (
     prevState: unknown,
     formData: FormData,
 ): Promise<InitialStateType> => {
+    const honeypot = formData.get("website_url") as string;
+
+    if (honeypot) {
+        return {
+            messageType: "add-comment-error",
+            errorMessage: "Erro no processamento.",
+        };
+    }
     const comment = {
         title: formData.get("title") as string,
         comment: formData.get("comment") as string,

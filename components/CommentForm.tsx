@@ -77,6 +77,17 @@ export default function CommentForm() {
             className="flex flex-col gap-4 w-full"
             ref={formRef}
         >
+            <div
+                style={{ position: "absolute", left: "-9999px" }}
+                aria-hidden="true"
+            >
+                <input
+                    type="text"
+                    name="website_url"
+                    tabIndex={-1}
+                    autoComplete="off"
+                />
+            </div>
             <p className="text-xs text-gray-500">Mínimo 3 caracteres *</p>
 
             <input
