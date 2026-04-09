@@ -3,8 +3,8 @@ import projectsLogo from "@/assets/projects-logo.webp";
 
 export default function Presentation() {
     return (
-        <article className="flex flex-col gap-4 col-span-2 p-8">
-            <div className="pb-10 flex flex-col gap-4">
+        <article className="flex flex-col gap-8 col-span-2 px-4">
+            <div className="flex flex-col gap-4 text-bg">
                 <p>
                     A iniciativa parte da necessidade de dar visibilidade
                     pública às ações extensionistas do docente do Curso de
@@ -27,7 +27,7 @@ export default function Presentation() {
                     A criação deste espaço virtual se justifica, portanto, por
                     diversas razões complementares:
                 </p>
-                <ul className="list-disc list-inside pl-5">
+                <ul className="list-disc list-inside pl-4">
                     <li>
                         Atender à demanda por transparência e prestação de
                         contas das ações financiadas e desenvolvidas no âmbito

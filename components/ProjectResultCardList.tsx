@@ -13,5 +13,5 @@ export default function ProjectResultCardList({ results }: ProjectResultCardList
         ) : (
             <NoItemsNotice text="Nenhum projeto postado ainda" />
         );
-    return <ul className="grid grid-cols-1 gap-8 p-4">{processesedResults}</ul>;
+    return <ul className="grid grid-cols-1 gap-8 px-4">{processesedResults}</ul>;
 }

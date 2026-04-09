@@ -1,21 +1,28 @@
+"use client";
+
 import { cleanUrl } from "@/lib/utils";
 import { PhotoCardProps } from "@/types";
 
 import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 const allowedIndexes = [0, 1, 2, 3, 4];
 
 export default function PhotoCard({ photoUrl, index }: PhotoCardProps) {
     const imageUrl = cleanUrl(photoUrl);
+    const { id } = useParams();
     return (
         <li>
-            <Image
-                width={300}
-                height={100}
-                src={imageUrl}
-                priority={allowedIndexes.includes(index)}
-                alt={"Foto do projeto"}
-                className="object-contain rounded w-auto h-auto shadow-md shadow-gray-800"
-            />
+            <Link href={`/projetos/fotos/${id}?index=${index}`}>
+                <Image
+                    width={300}
+                    height={300}
+                    src={imageUrl}
+                    priority={allowedIndexes.includes(index)}
+                    alt={"Foto do projeto"}
+                    className="object-cover text-bg rounded aspect-square"
+                />
+            </Link>
         </li>
     );
 }

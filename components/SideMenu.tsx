@@ -1,4 +1,4 @@
-import { getProjects } from "@/lib/utils";
+import { getProjects } from "@/lib/contentful";
 import { Project, ProjectTitle } from "@/types";
 import Link from "next/link";
 
@@ -18,8 +18,8 @@ export default async function SideMenu() {
     });
 
     return (
-        <nav className="p-4 border-l border-gray-500 select-none">
-            <h2 className="font-bold">Projetos de Extensão 2025</h2>
+        <nav className="p-4 border-l border-gray-500 select-none h-fit">
+            <h2 className="font-bold text-lg">Projetos de Extensão 2025</h2>
             <ul className="list-disc list-inside p-2 *:my-4 underline">
                 {projects2025.map(({ id, title }) => (
                     <li key={id}>
@@ -27,7 +27,7 @@ export default async function SideMenu() {
                     </li>
                 ))}
             </ul>
-            <h2 className="font-bold">Projetos de Extensão 2026</h2>
+            <h2 className="font-bold text-lg">Projetos de Extensão 2026</h2>
 
             <ul className="list-disc list-inside p-2 *:my-4 underline">
                 {projects2026.map(({ id, title }) => (

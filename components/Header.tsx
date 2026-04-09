@@ -13,7 +13,7 @@ export default function Header() {
                     priority={true}
                 />
             </div>
-            <h2 className="px-8 text-2xl font-bold">
+            <h2 className="px-8 text-2xl font-bold text-amber-50">
                 Projetos de Extensão FECISC do Curso de Administração
             </h2>
         </header>

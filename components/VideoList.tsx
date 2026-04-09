@@ -12,5 +12,5 @@ export default function VideoList({ videos }: VideoListProps) {
         ) : (
             <NoItemsNotice text="Nenhum vídeo postado ainda" />
         );
-    return <ul className="grid-common-styles">{processedVideos}</ul>;
+    return <ul className="grid-common-styles mx-4">{processedVideos}</ul>;
 }

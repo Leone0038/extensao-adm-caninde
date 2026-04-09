@@ -1,4 +1,5 @@
-import { getCounter } from "@/lib/utils";
+
+import { getCounter } from "@/lib/contentful";
 import { DashBoardCounter } from "@/types";
 
 export default async function DashBoard() {

@@ -3,7 +3,7 @@ import NewsList from "@/components/NewsList";
 import Pagination from "@/components/Pagination";
 import SearchInterface from "@/components/SearchInterface";
 import Title from "@/components/Title";
-import { getNews } from "@/lib/utils";
+import { getNews } from "@/lib/contentful";
 import { NewsPageSearchParams } from "@/types";
 
 export default async function NewsPage({ searchParams }: NewsPageSearchParams) {

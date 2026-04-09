@@ -1,7 +1,7 @@
 import CourseCardList from "@/components/CourseCardList";
 import Title from "@/components/Title";
 import WorkShopCardList from "@/components/WorkShopCardList";
-import { getCourses, getWorkShops } from "@/lib/utils";
+import { getCourses, getWorkShops } from "@/lib/contentful";
 
 export default async function CoursesAndWorkshopsPage() {
     const courses = await getCourses();

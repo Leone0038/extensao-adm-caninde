@@ -4,7 +4,7 @@ import ProjectResultCardList from "@/components/ProjectResultCardList";
 import ScientificWorkContainerList from "@/components/ScientificWorkContainerList";
 import Title from "@/components/Title";
 import VideoList from "@/components/VideoList";
-import { getSingleProject } from "@/lib/utils";
+import { getSingleProject } from "@/lib/contentful";
 import { SingleProjectPageParams, SocialMediaLinks } from "@/types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import fbIcon from "@/assets/fb-icon.svg";
@@ -37,19 +37,19 @@ export default async function SingleProjectPage({
     } = await getSingleProject(id);
 
     return (
-        <main className="flex gap-8 flex-col">
+        <main className="flex gap-8 flex-col sm:items-start items-center">
             <CommonLink
                 href="/"
-                label="Início"
+                label="Voltar"
                 styles="self-center mb-10 w-30 text-xl"
             />
             <Title text={title} />
-            <p className="p-4">
-                <span className="font-bold">Coordenador: </span>
+            <p className="text-bg mx-4">
+                <span className="font-bold">Coordenador(a): </span>
                 {coordinator}
             </p>
             <Title text={"Resumo"} />
-            <div className="p-4">{documentToReactComponents(summary)}</div>
+            <div className="text-bg max-w-150 mx-4">{documentToReactComponents(summary)}</div>
             <div className="flex gap-4 items-center">
                 {socialMediaLinks.map((link, i) => (
                     <Link href={link.href} key={i}>
@@ -63,7 +63,7 @@ export default async function SingleProjectPage({
                 ))}
             </div>
             <Title text={"Bolsistas"} />
-            <div className="p-4 flex flex-col gap-4">
+            <div className="flex flex-col gap-4 text-bg mx-4">
                 {documentToReactComponents(bursers)}
             </div>
             <Title text="Fotos" />

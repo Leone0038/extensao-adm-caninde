@@ -34,11 +34,11 @@ body {
     }
 
     .card-common-styles {
-        @apply p-4 rounded bg-primary shadow-md shadow-gray-800;
+        @apply p-4 rounded bg-primary;
     }
 
     .grid-common-styles {
-        @apply p-4 grid xl:grid-cols-4 gap-12 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1;
+        @apply grid xl:grid-cols-4 gap-12 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1;
     }
     .flex-col-common-styles {
         @apply flex flex-col gap-4 items-center text-center;
@@ -46,6 +46,10 @@ body {
 
     .page-common-styles {
         @apply flex flex-col gap-6;
+    }
+
+    .text-bg {
+        @apply bg-neutral-800 rounded p-4 shadow-md border border-neutral-700
     }
 
     p {

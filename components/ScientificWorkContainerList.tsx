@@ -19,7 +19,7 @@ export default function ScientificWorkContainerList({
             <NoItemsNotice text="Nenhum trabalho científico postado ainda" />
         );
     return (
-        <ul className="grid grid-cols-1 gap-8 p-4">
+        <ul className="grid grid-cols-1 gap-8 px-4">
             {processesedScientificWorks}
         </ul>
     );

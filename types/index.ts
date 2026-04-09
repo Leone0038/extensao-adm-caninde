@@ -2,6 +2,24 @@ import { Document } from "@contentful/rich-text-types";
 import { Entry, EntrySkeletonType } from "contentful";
 import { StaticImageData } from "next/image";
 
+export interface PhotosPageProps {
+    searchParams: Promise<{index: number}>
+    params: Promise<{id: string}>
+}
+
+export interface SlideShowProps {
+    photoIndex: number;
+    photos: {
+        fields: {
+            file: {
+                url: string;
+            };
+        };
+    }[];
+    singlePhotoUrl: string
+    
+}
+
 export interface SocialMediaLinks {
     icon: string;
     href: string;
@@ -118,6 +136,8 @@ export interface Project {
     scientificWorks: { fields: { file: { url: string } } }[];
     results: { fields: { file: { url: string } } }[];
 }
+
+
 export interface ProjectCardListProps {
     projects: Entry<EntrySkeletonType, undefined, string>[];
 }

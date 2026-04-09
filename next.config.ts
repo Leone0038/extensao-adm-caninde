@@ -12,10 +12,7 @@ const nextConfig: NextConfig = {
                 source: "/noticias",
                 destination: "/news",
             },
-            {
-                source: "/fotografias",
-                destination: "/photos",
-            },
+     
             {
                 source: "/sobre",
                 destination: "/about",
@@ -27,6 +24,10 @@ const nextConfig: NextConfig = {
             {
                 source: "/projetos/:id",
                 destination: "/projects/:id",
+            },
+              {
+                source: "/projetos/fotos/:id",
+                destination: "/projects/photos/:id",
             },
             {
                 source: "/cursos-e-oficinas",
