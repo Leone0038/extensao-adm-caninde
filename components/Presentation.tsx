@@ -6,12 +6,12 @@ export default function Presentation() {
         <article className="flex flex-col gap-4 col-span-2 p-8">
             <div className="pb-10 flex flex-col gap-4">
                 <p>
-                    A criação deste site parte da necessidade de dar
-                    visibilidade pública às ações extensionistas do docente do
-                    Curso de Administração, promovendo transparência, acesso à
-                    informação pela comunidade local e regional, e criando um
-                    repositório digital permanente de memória acadêmica e social
-                    das atividades desenvolvidas.
+                    A iniciativa parte da necessidade de dar visibilidade
+                    pública às ações extensionistas do docente do Curso de
+                    Administração, promovendo transparência, acesso à informação
+                    pela comunidade local e regional, e criando um repositório
+                    digital permanente de memória acadêmica e social das
+                    atividades desenvolvidas.
                 </p>
                 <p>
                     A extensão universitária, enquanto pilar indissociável do
