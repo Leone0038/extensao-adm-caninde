@@ -7,7 +7,7 @@ import Title from "@/components/Title";
 export default async function Home() {
     return (
         <main className="flex flex-col items-center">
-            <Title text="Sobre os Projetos de Extensão" styles="w-fit" />
+            <Title text="Sobre o Site" styles="w-fit" />
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-12 mb-10">
                 <Presentation />
                 <SideMenu />

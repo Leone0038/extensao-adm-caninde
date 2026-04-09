@@ -1,51 +1,90 @@
 import Logo from "./Logo";
-import projectsLogo from '@/assets/projects-logo.webp'
-
+import projectsLogo from "@/assets/projects-logo.webp";
 
 export default function Presentation() {
     return (
         <article className="flex flex-col gap-4 col-span-2 p-8">
-         
-            <p className="pb-10">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                odit at libero voluptatum sed enim eaque ex nostrum, delectus
-                iste eos quaerat velit quos itaque voluptas recusandae, deleniti
-                aliquam? Incidunt? Aspernatur natus tempora, tempore earum
-                delectus repudiandae qui explicabo placeat deleniti aliquid.
-                Laudantium porro, esse impedit exercitationem placeat facere,
-                minima quam officiis voluptatibus repellat iste earum ipsam
-                voluptate! Veniam, dicta? Fugit, molestias. Impedit iste et
-                consequuntur eum assumenda aspernatur, beatae itaque iure
-                explicabo nisi voluptatibus dolor, nam voluptatem voluptas
-                tenetur reprehenderit atque aperiam culpa illo odio, aut
-                tempora. Possimus, consequatur! Facilis, iste amet delectus
-                ullam corporis maxime vitae minima illo deserunt labore sit unde
-                alias ipsam aperiam nesciunt velit accusantium, voluptate
-                possimus reiciendis! Deserunt repellendus expedita, suscipit
-                laudantium nobis perferendis. Deserunt cum tenetur amet error
-                culpa vel unde explicabo exercitationem dignissimos? Dolore,
-                blanditiis omnis voluptatibus mollitia fugiat asperiores eum
-                voluptates eius dolorem laudantium tempora, ipsum quo corrupti
-                esse eaque illum. Suscipit laudantium in debitis sint? Explicabo
-                similique tempore, ea quisquam consequatur repellendus officia,
-                praesentium veritatis commodi hic asperiores excepturi
-                cupiditate cum temporibus eos sit, numquam et molestias! Autem,
-                laborum accusamus! Accusantium vel aliquam asperiores sapiente
-                facere! Saepe vero modi quibusdam atque necessitatibus dolorum
-                quam tenetur quaerat, aliquid error beatae deleniti, rerum
-                consectetur eum. Amet repudiandae, perferendis odit cumque rem
-                nihil! Veritatis sit dignissimos obcaecati architecto. Sunt
-                animi dolorem ad laudantium consequatur asperiores incidunt aut
-                rem nesciunt consequuntur ducimus sapiente ipsum ullam cumque
-                recusandae ea nisi, unde blanditiis deserunt nihil. Tenetur?
-                Placeat eum, illo ipsam veritatis ad quibusdam dicta magni
-                maiores quia repellat sequi vitae suscipit esse aperiam, autem
-                assumenda explicabo a, voluptatibus et sunt earum similique hic
-                pariatur sit. Ratione? Labore nostrum odio non recusandae
-                aperiam ratione delectus, impedit eaque libero quam, porro
-                magnam odit id dolorum omnis accusamus animi illum. Quis unde,
-                hic praesentium alias aliquam maiores nesciunt pariatur.
-            </p>
+            <div className="pb-10 flex flex-col gap-4">
+                <p>
+                    A criação deste site parte da necessidade de dar
+                    visibilidade pública às ações extensionistas do docente do
+                    Curso de Administração, promovendo transparência, acesso à
+                    informação pela comunidade local e regional, e criando um
+                    repositório digital permanente de memória acadêmica e social
+                    das atividades desenvolvidas.
+                </p>
+                <p>
+                    A extensão universitária, enquanto pilar indissociável do
+                    tripé ensino-pesquisa-extensão, demanda não apenas a
+                    realização de ações junto à comunidade, mas também a
+                    produção de registros e a comunicação transparente dos
+                    resultados alcançados. No contexto da FECISC/UECE em
+                    Canindé, as ações extensionistas têm crescido em número e
+                    impacto, tornando urgente a criação de um canal digital
+                    oficial e permanente de comunicação e documentação.
+                </p>
+                <p>
+                    A criação deste espaço virtual se justifica, portanto, por
+                    diversas razões complementares:
+                </p>
+                <ul className="list-disc list-inside pl-5">
+                    <li>
+                        Atender à demanda por transparência e prestação de
+                        contas das ações financiadas e desenvolvidas no âmbito
+                        da universidade pública;
+                    </li>
+                    <li>
+                        Ampliar o alcance das atividades extensionistas para
+                        além do espaço físico da instituição, alcançando
+                        comunidades rurais, parceiros institucionais e
+                        interessados em todo o Brasil;
+                    </li>
+                    <li>
+                        Favorecer a articulação entre projetos, evitando
+                        sobreposições e potencializando sinergias entre as
+                        diferentes ações;
+                    </li>
+                    <li>
+                        Contribuir com o cumprimento da política de
+                        curricularização da extensão, exigida pelas diretrizes
+                        do MEC, que determina que pelo menos 10% da carga
+                        horária dos cursos seja destinada a atividades
+                        extensionistas;
+                    </li>
+                    <li>
+                        Valorizar o trabalho dos bolsistas, voluntários e
+                        parceiros, conferindo reconhecimento público às suas
+                        contribuições.
+                    </li>
+                </ul>
+                <p>
+                    Diante do exposto, o site se constitui como ferramenta
+                    estratégica para a consolidação da extensão universitária
+                    dos docentes do curso de Administração da FECISC/UECE em
+                    Canindé, funcionando como vitrine institucional, repositório
+                    de memória e canal de comunicação com a sociedade.
+                </p>
+                <p>
+                    O site está inserido no contexto das ações extensionistas
+                    município de Canindé localizado na mesorregião do Sertão
+                    Cearense, a aproximadamente 110 km de Fortaleza. Canindé é
+                    reconhecida como um dos maiores polos de turismo religioso
+                    do Brasil, recebendo milhares de romeiros anualmente, o que
+                    confere à cidade um perfil socioeconômico peculiar e
+                    demandas específicas no campo da gestão, do empreendedorismo
+                    e do desenvolvimento local.
+                </p>
+                <p>
+                    Nesse cenário, o Curso de Administração da FECISC/UECE tem
+                    desempenhado papel fundamental na formação de profissionais
+                    comprometidos com a realidade local, desenvolvendo projetos
+                    e cursos de extensão que dialogam diretamente com as
+                    necessidades da comunidade canindeense e regional. As ações
+                    abrangem temáticas como gestão de negócios,
+                    empreendedorismo, finanças pessoais, capacitação
+                    profissional, inclusão digital, entre outras.
+                </p>
+            </div>
             <Logo
                 width={500}
                 height={500}
