@@ -4,6 +4,7 @@ import LogoutForm from "@/components/LogoutForm";
 import NoItemsNotice from "@/components/NoItemsNotice";
 import Title from "@/components/Title";
 import { getComments } from "@/lib/actions";
+import { Comment } from "@prisma/client";
 
 export default async function AdminPage() {
     const comments = await getComments();
@@ -11,7 +12,7 @@ export default async function AdminPage() {
         comments.length === 0 ? (
             <NoItemsNotice text="Nenhum comentário para remover" />
         ) : (
-            comments.map((comment, i) => (
+            comments.map((comment: Comment, i) => (
                 <div key={i} className="relative">
                     <CommentCard {...comment} index={i} />
                     <DeleteCommentForm id={comment.id} index={i} />
