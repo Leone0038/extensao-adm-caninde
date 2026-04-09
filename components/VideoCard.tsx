@@ -11,7 +11,7 @@ export default function VideoCard({ videoUrl }: VideoCardProps) {
                 controls
                 muted
                 playsInline
-                className="rounded aspect-video text-bg"
+                className="rounded aspect-4/3 text-bg"
                 width={400}
             ></video>
         </li>

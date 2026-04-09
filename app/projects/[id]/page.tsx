@@ -41,7 +41,7 @@ export default async function SingleProjectPage({
             <CommonLink
                 href="/"
                 label="Voltar"
-                styles="self-center mb-10 w-30 text-xl"
+                styles="self-center mb-5 w-30 text-xl"
             />
             <Title text={title} />
             <p className="text-bg mx-4">

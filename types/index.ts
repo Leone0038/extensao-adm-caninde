@@ -16,7 +16,6 @@ export interface SlideShowProps {
             };
         };
     }[];
-    singlePhotoUrl: string
     
 }
 

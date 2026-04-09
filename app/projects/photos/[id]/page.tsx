@@ -10,7 +10,6 @@ export default async function PhotosPage({
     const { index } = await searchParams;
     const { id } = await params;
     const { photos } = await getSingleProject(id);
-    const singlePhotoUrl = `/projects/photos/${id}/`;
     return (
         <main className="flex-1 flex flex-col items-center">
             <CommonLink
@@ -21,7 +20,6 @@ export default async function PhotosPage({
             <SlideShow
                 photoIndex={index}
                 photos={photos}
-                singlePhotoUrl={singlePhotoUrl}
             />
         </main>
     );
