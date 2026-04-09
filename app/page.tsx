@@ -12,12 +12,12 @@ export default async function Home() {
                 <Presentation />
                 <SideMenu />
             </div>
-            <Title
-                text="Deixe seu comentário sobre os projetos de extensão do curso de Administração"
-                styles="w-fit"
-                
-            />
-            <div className="flex flex-col gap-4 p-8 max-w-2xl w-full">
+            <div className="flex flex-col gap-4 p-8 max-w-4xl w-full">
+                <Title
+                    text="Deixe seu comentário sobre os projetos de extensão do curso de Administração"
+                    styles="w-fit"
+                />
+
                 <CommentForm />
                 <CommentCardList />
             </div>

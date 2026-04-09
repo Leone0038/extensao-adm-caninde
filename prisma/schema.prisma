@@ -17,4 +17,5 @@ model Comment {
   title String
   comment String
   createdAt DateTime @default(now())
+  userIp String
 }

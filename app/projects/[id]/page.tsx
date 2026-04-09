@@ -41,7 +41,7 @@ export default async function SingleProjectPage({
             <CommonLink
                 href="/"
                 label="Início"
-                styles="self-center mb-10 w-30 text-2xl "
+                styles="self-center mb-10 w-30 text-xl"
             />
             <Title text={title} />
             <p className="p-4">

@@ -16,7 +16,7 @@ export default async function CommentCardList() {
         );
     return (
         <>
-        <h2 className="border-b h2-common-styles p-4">{comments.length} - {comments.length === 1 ? 'Comentário': 'Comentários'}</h2>
+        <h2 className="border-b border-gray-300 h2-common-styles p-4">{comments.length} - {comments.length === 1 ? 'Comentário': 'Comentários'}</h2>
             <ul className="flex flex-col gap-4 w-full min-w-0">{processedComments}</ul>
         </>
     );

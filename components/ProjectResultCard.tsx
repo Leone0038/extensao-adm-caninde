@@ -7,11 +7,11 @@ export default function ProjectResultCard({
     const cleanResultUrl = cleanUrl(resultUrl);
     return (
         <li>
-            <article className="card-common-styles flex flex-col gap-4 justify-between w-fit">
+            <article className="card-common-styles flex flex-col gap-4 justify-between min-w-0 w-full overflow-hidden">
                 <a
                     href={cleanResultUrl}
                     target="_blank"
-                    className="underline wrap-break-word"
+                    className="underline break-all"
                 >
                     {cleanResultUrl}
                 </a>

@@ -5,7 +5,7 @@ import { StaticImageData } from "next/image";
 export interface SocialMediaLinks {
     icon: string;
     href: string;
-    alt: string
+    alt: string;
 }
 
 export interface CommentCardProps {
@@ -19,10 +19,15 @@ export interface CommentCardListProps {
     comments: Entry<EntrySkeletonType, undefined, string>[];
 }
 
-export type MessageType = "add-comment-success" | "add-comment-error";
+export type MessageType =
+    | "add-comment-success"
+    | "add-comment-error"
+    | "delete-comment-error"
+    | "delete-comment-success"
+    | "login-error";
 
 export interface InitialStateType {
-    message: MessageType | null;
+    messageType: MessageType | null;
     errorMessage?: string;
 }
 

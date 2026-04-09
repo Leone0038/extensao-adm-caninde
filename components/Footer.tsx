@@ -11,7 +11,7 @@ export default function Footer() {
                 <p>© leonedantas80@gmail.com</p>
             </div>
             <div className="">
-                <p className="font-bold">Endereço:</p>
+                <p className="font-bold">Endereço da instuição:</p>
                 <p>Av. Dr. Aramis Paiva, 460 - Centro, Canindé - CE, 62700-000</p>
             </div>
         </footer>
