@@ -31,7 +31,7 @@ export default function SlideShow({ photoIndex, photos }: SlideShowProps) {
                 src={cleanUrl(photos[currentPhotoIndex].fields.file.url)}
                 alt={`Imagem do carrosel - ${currentPhotoIndex + 1}`}
                 priority
-                className="object-contain"
+                className="object-contain rounded"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw"
             />
             <div className="absolute inset-0 flex items-center justify-between [&_button]:cursor-pointer">

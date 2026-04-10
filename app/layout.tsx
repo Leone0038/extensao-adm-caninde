@@ -30,8 +30,10 @@ export default function RootLayout({
             className="scroll-smooth antialiased"
             data-scroll-behavior="smooth"
         >
-            <body className="text-white leading-normal bg-neutral-900">
-                <Providers>{children}</Providers>
+            <body className="text-white leading-normal min-h-dvh flex flex-col bg-neutral-900">
+                <Providers>
+                    <main className="flex flex-1">{children}</main>
+                </Providers>
             </body>
         </html>
     );

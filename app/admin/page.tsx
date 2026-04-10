@@ -20,12 +20,12 @@ export default async function AdminPage() {
             ))
         );
     return (
-        <main className="flex-1 flex flex-col justify-between">
-            <div>
+        <main className="flex-1 flex flex-col">
+            <div className="flex sm:flex-row flex-col gap-4 justify-between items-center">
                 <Title text="Admin Dashboard" styles="w-fit" />
-                <ul className="p-8 max-w-4xl">{processedComments}</ul>
+                <LogoutForm />
             </div>
-            <LogoutForm />
+            <ul className="p-8 max-w-4xl">{processedComments}</ul>
         </main>
     );
 }
