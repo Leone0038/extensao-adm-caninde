@@ -14,7 +14,7 @@ export const SubmitBtn = () => {
             disabled={pending}
             className="cursor-pointer bg-primary p-2 rounded self-start w-30 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-            {pending ? "Logging in" : "Login"}
+            {pending ? "Logging in" : "Log in"}
         </button>
     );
 };

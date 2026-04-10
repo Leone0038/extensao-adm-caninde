@@ -11,7 +11,7 @@ export const SubmitBtn = () => {
             disabled={pending}
             className="cursor-pointer bg-red-700 p-2 rounded self-start w-30"
         >
-            {pending ? "Logging out" : "Logout"}
+            {pending ? "Logging out" : "Log out"}
         </button>
     );
 };

@@ -94,7 +94,7 @@ export const deleteComment = async (
     const id = formData.get("id") as string;
     try {
         await prisma.comment.delete({ where: { id } });
-        revalidatePath("/admin");
+        revalidatePath("/dashboard");
         revalidatePath("/");
         return { messageType: "delete-comment-success" };
     } catch (error) {
@@ -120,7 +120,7 @@ export const redirectToAdminPage = async (
             maxAge: 60 * 60 * 24,
             path: "/",
         });
-        redirect("/admin");
+        redirect("/dashboard");
     }
     return { messageType: "login-error", errorMessage: "Senha incorreta" };
 };

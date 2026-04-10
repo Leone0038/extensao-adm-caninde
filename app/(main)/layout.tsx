@@ -13,9 +13,9 @@ export default function MainPageLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <main className="flex-1 min-h-dvh flex flex-col justify-between">
+        <main className="flex-1 flex flex-col">
             <Header />
-            <main className="flex">{children}</main>
+            <main className="lg:p-16 px-4 py-8">{children}</main>
             <Footer />
         </main>
     );

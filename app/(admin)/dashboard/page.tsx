@@ -22,7 +22,7 @@ export default async function AdminPage() {
     return (
         <main className="flex-1 flex flex-col">
             <div className="flex sm:flex-row flex-col gap-4 justify-between items-center">
-                <Title text="Admin Dashboard" styles="w-fit" />
+                <Title text="Dashboard" styles="w-fit" />
                 <LogoutForm />
             </div>
             <ul className="p-8 max-w-4xl">{processedComments}</ul>

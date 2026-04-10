@@ -6,7 +6,7 @@ import Title from "@/components/Title";
 
 export default async function Home() {
     return (
-        <main className="flex flex-col sm:items-start items-center gap-8 lg:p-16 px-4 py-8">
+        <main className="flex flex-col sm:items-start items-center gap-8">
             <Title text="Sobre o Site"/>
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-12 mb-10">
                 <Presentation />

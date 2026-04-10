@@ -10,5 +10,5 @@ export default function LoginPageLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <main className="flex-1 flex justify-center pt-20">{children}</main>;
+    return <>{children}</>;
 }

@@ -10,5 +10,5 @@ export default function AdminPageLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <main className="flex-1 flex p-4">{children}</main>;
+    return <>{ children }</>;
 }

@@ -5,7 +5,7 @@ export function proxy(request: NextRequest) {
   const authCookie = request.cookies.get('admin_session');
   const { pathname } = request.nextUrl;
 
-  if (pathname.startsWith('/admin')) {
+  if (pathname.startsWith('/dashboard')) {
     if (!authCookie) {
       return NextResponse.redirect(new URL('/login', request.url));
     }
@@ -15,5 +15,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*'], 
+  matcher: ['/dashboard/:path*'], 
 };
