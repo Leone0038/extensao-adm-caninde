@@ -49,7 +49,7 @@ export default async function SingleProjectPage({
                 {coordinator}
             </p>
             <Title text={"Resumo"} />
-            <div className="text-bg max-w-150 mx-4">{documentToReactComponents(summary)}</div>
+            <div className="text-bg max-w-150 mx-4 flex flex-col gap-4">{documentToReactComponents(summary)}</div>
             <div className="flex gap-4 items-center">
                 {socialMediaLinks.map((link, i) => (
                     <Link href={link.href} key={i}>
