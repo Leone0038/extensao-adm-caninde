@@ -1,5 +1,6 @@
 import { cleanUrl } from "@/lib/utils";
 import { ProjectResultCardProps } from "@/types";
+import Link from "next/link";
 
 export default function ProjectResultCard({
     resultUrl,
@@ -8,13 +9,13 @@ export default function ProjectResultCard({
     return (
         <li>
             <article className="card-common-styles flex flex-col gap-4 justify-between min-w-0 w-full max-w-120 overflow-hidden">
-                <a
+                <Link
                     href={cleanResultUrl}
                     target="_blank"
                     className="underline break-all"
                 >
                     {cleanResultUrl}
-                </a>
+                </Link>
             </article>
         </li>
     );
