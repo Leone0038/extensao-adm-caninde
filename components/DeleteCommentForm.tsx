@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useFormStatus } from "react-dom";
 import deleteIcon from "@/assets/delete.svg";
-import loadingIcon from "@/assets/loading.svg";
+import loadingIcon from "@/assets/loading-black.svg";
 import { useActionState, useEffect, useState } from "react";
 import { deleteComment } from "@/lib/actions";
 import { initialState } from "./CommentForm";
