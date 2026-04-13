@@ -19,7 +19,7 @@ const SubmitBtn = ({
         <button
             type="submit"
             disabled={isDisabled}
-            className="bg-secondary text-white p-2 rounded cursor-pointer self-start w-25 hover:bg-green-900 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-secondary text-text-primary p-2 rounded cursor-pointer self-start w-25 hover:bg-green-900 disabled:opacity-50 disabled:cursor-not-allowed"
         >
             {pending ? "Enviando" : "Enviar"}
         </button>

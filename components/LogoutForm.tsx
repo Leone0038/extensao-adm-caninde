@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { logout } from "@/lib/actions";
 import { useFormStatus } from "react-dom";
@@ -9,7 +9,7 @@ export const SubmitBtn = () => {
         <button
             type="submit"
             disabled={pending}
-            className="cursor-pointer text-white bg-red-700 p-2 rounded self-start w-30"
+            className="cursor-pointer text-text-primary bg-red-700 p-2 rounded self-start w-30"
         >
             {pending ? "Logging out" : "Log out"}
         </button>

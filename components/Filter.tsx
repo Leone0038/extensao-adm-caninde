@@ -39,7 +39,7 @@ export default function Filter() {
             <label htmlFor="oldest">Mais antiga</label>
             <button
                 type="submit"
-                className="bg-primary text-white py-2 px-4 rounded disabled:opacity-5"
+                className="bg-primary text-text-primary py-2 px-4 rounded disabled:opacity-5"
             >
                 Filtrar
             </button>

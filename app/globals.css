@@ -19,6 +19,7 @@ body {
     --color-primary: #1a3c6e;
     --color-secondary: #18A74F;
     --color-tertiary: #c9a84c;
+    --color-text-primary: oklch(98.7% 0.022 95.277);
 }
 
 
@@ -37,7 +38,7 @@ body {
     }
 
     .card-common-styles {
-        @apply p-4 rounded bg-secondary text-white;
+        @apply p-4 rounded bg-secondary text-text-primary;
     }
 
     .grid-common-styles {
