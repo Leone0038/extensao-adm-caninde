@@ -4,7 +4,7 @@ import NoItemsNotice from "./NoItemsNotice";
 
 export default function PhotoList({ photos }: PhotoListProps) {
     let processedPhotos;
-    if (processedPhotos) {
+    if (photos) {
         processedPhotos = photos?.map((photoUrl, i) => (
             <PhotoCard photoUrl={photoUrl.fields.file.url} index={i} key={i} />
         ));

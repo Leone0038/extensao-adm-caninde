@@ -4,7 +4,7 @@ import ProjectResultCard from "./ProjectResultCard";
 
 export default function ProjectResultCardList({ results }: ProjectResultCardListProps) {
     let processesedResults;
-    if (processesedResults) {
+    if (results) {
         processesedResults = results.map((result, i) => (
             <ProjectResultCard  resultUrl={result.fields.file.url} key={i} />
         ));

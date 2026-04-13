@@ -7,7 +7,7 @@ export default function ScientificWorkContainerList({
     scientificWorks,
 }: ScientificWorkContainerListProps) {
     let processesedScientificWorks;
-    if (processesedScientificWorks) {
+    if (scientificWorks) {
         processesedScientificWorks = scientificWorks.map((scientificWork, i) => (
             <ScientificWorkContainer
                 scientificWorkUrl={scientificWork.fields.file.url}

@@ -4,7 +4,7 @@ import NoItemsNotice from "./NoItemsNotice";
 
 export default function VideoList({ videos }: VideoListProps) {
     let processedVideos;
-    if (processedVideos) {
+    if (videos) {
         processedVideos = videos.map((video, i) => (
             <VideoCard videoUrl={video.fields.file.url} key={i} />
         ));
