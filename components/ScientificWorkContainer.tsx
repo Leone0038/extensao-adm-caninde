@@ -1,5 +1,6 @@
 import { cleanUrl } from "@/lib/utils";
 import { ScientificWorkContainerProps } from "@/types";
+import Link from "next/link";
 
 export default function ScientificWorkContainer({
     scientificWorkUrl
@@ -10,13 +11,13 @@ export default function ScientificWorkContainer({
             <article className="card-common-styles flex flex-col gap-4 justify-between max-w-120">
                 <p>
                     <span className="font-bold">Link: </span>
-                    <a
+                    <Link
                         href={cleanScientificWorkUrl}
                         target="_blank"
                         className="underline break-all"
                     >
                         {cleanScientificWorkUrl}
-                    </a>
+                    </Link>
                 </p>
             </article>
         </li>
