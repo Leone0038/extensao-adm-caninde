@@ -17,9 +17,11 @@ body {
 
 @theme {
     --color-primary: #1a3c6e;
-    --color-secondary: #2e7d32;
+    --color-secondary: #18A74F;
     --color-tertiary: #c9a84c;
 }
+
+
 
 @layer base {
     h1,
@@ -31,6 +33,7 @@ body {
 
     .h2-common-styles {
         @apply text-2xl font-bold;
+
     }
 
     .card-common-styles {
@@ -49,7 +52,7 @@ body {
     }
 
     .text-bg {
-        @apply bg-neutral-800 rounded p-4 shadow-md border border-neutral-700
+        @apply rounded p-4 shadow-md border bg-neutral-50
     }
 
     p {
