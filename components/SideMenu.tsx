@@ -19,7 +19,7 @@ export default async function SideMenu() {
 
     return (
         <nav className="p-4 border-l border-gray-500 select-none h-fit">
-            <h2 className="font-bold text-lg text-secondary">Projetos de Extensão 2025</h2>
+            <h2 className="font-extrabold text-lg text-secondary">Projetos de Extensão 2025</h2>
             <ul className="list-disc list-inside p-2 *:my-4 underline">
                 {projects2025.map(({ id, title }) => (
                     <li key={id}>
@@ -27,7 +27,7 @@ export default async function SideMenu() {
                     </li>
                 ))}
             </ul>
-            <h2 className="font-bold text-lg text-secondary">Projetos de Extensão 2026</h2>
+            <h2 className="font-extrabold text-lg text-secondary">Projetos de Extensão 2026</h2>
 
             <ul className="list-disc list-inside p-2 *:my-4 underline">
                 {projects2026.map(({ id, title }) => (
