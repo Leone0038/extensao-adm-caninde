@@ -9,7 +9,7 @@ export default function ProjectResultCardList({ results }: ProjectResultCardList
             <ProjectResultCard  resultUrl={result.fields.file.url} key={i} />
         ));
     } else {
-        processesedResults = <NoItemsNotice text="Nenhum projeto postado ainda" />;
+        processesedResults = <NoItemsNotice text="Nenhum resultado postado ainda" />;
     }
  
    
