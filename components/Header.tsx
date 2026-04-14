@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 export default function Header() {
     return (
-        <header className="text-center bg-secondary h-100 flex lg:flex-row flex-col items-center justify-center">
+        <header className="text-center bg-linear-to-r from-tertiary via-secondary to-primary h-100 flex lg:flex-row flex-col items-center justify-center">
             <div className="lg:border-r border-gray-300">
                 <Logo
                     height={400}
