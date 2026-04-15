@@ -10,17 +10,15 @@ export default function Logo({
     styles,
 }: LogoProps) {
     return (
-        <div className="bg-transparent">
-            <Link href="/">
-                <Image
-                    src={img}
-                    alt="Logo"
-                    priority={priority}
-                    width={width}
-                    height={height}
-                    className={`w-auto h-auto shrink-0 ${styles}`}
-                />
-            </Link>
-        </div>
+        <Link href="/">
+            <Image
+                src={img}
+                alt="Logo"
+                priority={priority}
+                width={width}
+                height={height}
+                className={`w-auto h-auto shrink-0 ${styles}`}
+            />
+        </Link>
     );
 }
