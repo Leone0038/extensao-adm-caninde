@@ -18,6 +18,7 @@ export default function Logo({
                 width={width}
                 height={height}
                 className={`w-auto h-auto shrink-0 ${styles}`}
+                decoding="async"
             />
         </Link>
     );
