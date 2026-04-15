@@ -18,6 +18,12 @@ body, html {
         sans-serif;
 }
 
+[data-nextjs-scroll-focus-boundary] img, 
+next-route-announcer + *,
+img[src*="microlink"] {
+    background-color: white !important;
+    color-scheme: light !important;
+}
 
 @theme {
     --color-primary: #1a3c6e;
