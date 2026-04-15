@@ -18,6 +18,10 @@ body, html {
         sans-serif;
 }
 
+img {
+    background-color: transparent !important;
+}
+
 @theme {
     --color-primary: #1a3c6e;
     --color-secondary: #18A74F;
