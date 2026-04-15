@@ -17,7 +17,8 @@ export default function Logo({
                 priority={priority}
                 width={width}
                 height={height}
-                className={`w-auto h-auto shrink-0 bg-transparent ${styles}`}
+                unoptimized
+                className={`w-auto h-auto shrink-0 ${styles}`}
             />
         </Link>
     );
