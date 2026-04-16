@@ -29,7 +29,7 @@ export default function BreadCrumbs({ projectName }: BreadCrumbsProps) {
                     const displayLabel = isID ? projectName : labelMap[segment];
                     return (
                         <li key={i} className="flex items-center gap-2">
-                            <span>&gt;</span>
+                            <span>/</span>
                             {isLast ? (
                                 <span> {displayLabel} </span>
                             ) : (
