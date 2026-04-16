@@ -1,4 +1,3 @@
-import CommonLink from "@/components/CommonLink";
 
 import Title from "@/components/Title";
 import { getSingleProject } from "@/lib/contentful";
@@ -9,6 +8,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 // import ytIcon from "@/assets/yt-icon.svg";
 
 import ProjectMenu from "@/components/ProjectMenu";
+import BreadCrumbs from "@/components/BreadCrumbs";
 
 // const socialMediaLinks: SocialMediaLinks[] = [
 //     { href: "/", icon: fbIcon, alt: "Ícone do Facebook" },
@@ -26,29 +26,27 @@ export default async function SingleProjectPage({
         await getSingleProject(id);
 
     return (
-        <main className="grid lg:grid-cols-3 grid-cols-1 gap-12">
-            <section className="col-span-2 flex flex-col items-start gap-4">
-                <CommonLink
-                    href="/"
-                    label="Início"
-                    styles="mb-4 w-30 text-xl"
-                />
-                <Title text={title + " (" + year + ")"} />
-                <p className="mx-4 text-bg">
-                    <span className="font-bold">Coordenador(a): </span>
-                    {coordinator}
-                </p>
-                <Title text={"Resumo"} />
-                <div className="max-w-150 mx-4 flex flex-col gap-4 text-bg">
-                    {documentToReactComponents(summary)}
-                </div>
+        <main className="flex flex-col">
+            <BreadCrumbs projectName={title} />
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-12">
+                <section className="lg:col-span-2 flex flex-col items-start gap-4">
+                    <Title text={title + " (" + year + ")"} />
+                    <p className="mx-4 text-bg">
+                        <span className="font-bold">Coordenador(a): </span>
+                        {coordinator}
+                    </p>
+                    <Title text={"Resumo"} />
+                    <div className="max-w-150 mx-4 flex flex-col gap-4 text-bg">
+                        {documentToReactComponents(summary)}
+                    </div>
 
-                <Title text={"Bolsistas"} />
-                <div className="flex flex-col gap-4 mx-4 text-bg">
-                    {documentToReactComponents(bursers)}
-                </div>
-            </section>
-            <ProjectMenu id={id} />
+                    <Title text={"Bolsistas"} />
+                    <div className="flex flex-col gap-4 mx-4 text-bg">
+                        {documentToReactComponents(bursers)}
+                    </div>
+                </section>
+                <ProjectMenu id={id} />
+            </div>
         </main>
     );
 }
