@@ -63,6 +63,9 @@ body, html {
         @apply [&_a]:underline break-all flex flex-col gap-4
     }
 
+    .secondary-style {
+        @apply bg-secondary p-4 rounded shadow-md text-text-primary font-bold
+    }
     p {
         font-family: var(--font-opensans);
     }
