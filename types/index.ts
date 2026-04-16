@@ -193,3 +193,8 @@ export interface PaginationProps {
     totalPages: number;
     currentPage: number;
 }
+
+export interface BreadCrumbsProps {
+    projectName?: string;
+    id?: string
+}
