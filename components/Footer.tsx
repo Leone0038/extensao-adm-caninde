@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import logoFooter from "@/assets/main-logo.webp";
 import Logo from "./Logo";

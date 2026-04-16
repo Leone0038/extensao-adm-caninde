@@ -2,7 +2,17 @@ import { Document } from "@contentful/rich-text-types";
 import { Entry, EntrySkeletonType } from "contentful";
 import { StaticImageData } from "next/image";
 
-export interface PhotosPageProps {
+export interface ProjectMenuProps {
+    id: string
+}
+
+export interface ProjectMenuOptions {
+    href: string
+    label: string
+    icon: string
+}
+
+export interface ProjectSubPageProps {
     searchParams: Promise<{index: number}>
     params: Promise<{id: string}>
 }
@@ -101,13 +111,10 @@ export interface PhotoListProps {
     photos: { fields: { file: { url: string } } }[];
 }
 
-export interface VideoCardProps {
-    videoUrl: string;
+export interface VideoLinkProps {
+    videoLinks: Document;
 }
 
-export interface VideoListProps {
-    videos: { fields: { file: { url: string } } }[];
-}
 
 export interface NoItemsNoticeProps {
     text: string;
@@ -118,10 +125,7 @@ export interface AboutInfoCardProps {
     title: string;
 }
 export interface ScientificWorkContainerProps {
-    scientificWorkUrl: string;
-}
-export interface ScientificWorkContainerListProps {
-    scientificWorks: { fields: { file: { url: string } } }[];
+    scientificWorks: Document;
 }
 
 export interface Project {
@@ -131,9 +135,9 @@ export interface Project {
     coordinator: string;
     year: number;
     photos: { fields: { file: { url: string } } }[];
-    videos: { fields: { file: { url: string } } }[];
-    scientificWorks: { fields: { file: { url: string } } }[];
-    results: { fields: { file: { url: string } } }[];
+    videos: Document;
+    scientificWorks: Document;
+    results: Document;
 }
 
 
@@ -151,11 +155,7 @@ export interface SingleProjectPageParams {
 }
 
 export interface ProjectResultCardProps {
-    resultUrl: string;
-}
-
-export interface ProjectResultCardListProps {
-    results: { fields: { file: { url: string } } }[];
+    results: Document;
 }
 
 export interface CourseCardProps {

@@ -9,5 +9,5 @@ export default function PhotosPageLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <main className="flex-1 px-4 py-8 flex">{children}</main>;
+    return <>{children}</>;
 }

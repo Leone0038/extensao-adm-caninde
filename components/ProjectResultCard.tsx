@@ -1,22 +1,6 @@
-import { cleanUrl } from "@/lib/utils";
 import { ProjectResultCardProps } from "@/types";
-import Link from "next/link";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-export default function ProjectResultCard({
-    resultUrl,
-}: ProjectResultCardProps) {
-    const cleanResultUrl = cleanUrl(resultUrl);
-    return (
-        <li>
-            <article className="card-common-styles flex flex-col gap-4 justify-between min-w-0 w-full max-w-120 overflow-hidden">
-                <Link
-                    href={cleanResultUrl}
-                    target="_blank"
-                    className="underline break-all"
-                >
-                    {cleanResultUrl}
-                </Link>
-            </article>
-        </li>
-    );
+export default function ProjectResultCard({ results }: ProjectResultCardProps) {
+    return <div className="[&_a]:underline break-all w-4/5 p-4 flex flex-col gap-4 text-bg">{documentToReactComponents(results)}</div>;
 }

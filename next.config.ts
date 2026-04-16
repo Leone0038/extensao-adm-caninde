@@ -29,10 +29,23 @@ const nextConfig: NextConfig = {
                 source: "/projetos/fotos/:id",
                 destination: "/projects/photos/:id",
             },
-            {
-                source: "/cursos-e-oficinas",
-                destination: "/courses-and-workshops",
+              {
+                source: "/projetos/videos/:id",
+                destination: "/projects/videos/:id",
             },
+             {
+                source: "/projetos/trabalhos/:id",
+                destination: "/projects/scientific-works/:id",
+            },
+             {
+                source: "/projetos/resultados/:id",
+                destination: "/projects/results/:id",
+            },
+            {
+                source: "/projetos/slideshow/:id",
+                destination: "/projects/slideshow/:id",
+            },
+           
         ];
     },
     images: {

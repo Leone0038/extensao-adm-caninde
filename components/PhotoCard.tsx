@@ -13,7 +13,7 @@ export default function PhotoCard({ photoUrl, index }: PhotoCardProps) {
     const { id } = useParams();
     return (
         <li id={id?.toString()}>
-            <Link href={`/projetos/fotos/${id}?index=${index}`}>
+            <Link href={`/projetos/slideshow/${id}?index=${index}`}>
                 <Image
                     width={300}
                     height={300}

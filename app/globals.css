@@ -52,7 +52,7 @@ body, html {
     }
 
     .page-common-styles {
-        @apply flex flex-col gap-6;
+        @apply flex-1 flex flex-col items-start;
     }
 
     .text-bg {
