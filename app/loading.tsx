@@ -3,7 +3,7 @@ import loadingSpinner from "@/assets/loading-black.svg";
 
 export default function loading() {
     return (
-        <div className="flex-1 grid place-content-center min-h-100">
+        <div className="flex-1 grid place-content-center">
             <Image
                 width={100}
                 height={100}
