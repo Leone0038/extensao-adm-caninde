@@ -22,14 +22,14 @@ const projectMenuOptions: ProjectMenuOptions[] = [
 ];
 export default function ProjectMenu({ id }: ProjectMenuProps) {
     return (
-        <section className="p-4 text-text-primary flex flex-col gap-4 font-bold">
+        <section className="text-text-primary flex flex-col gap-4 font-bold">
             {projectMenuOptions.map(({ icon, label, href }, i) => (
                 <Link
                     key={i}
                     href={`${href}${id}`}
                     className="bg-secondary p-4 flex gap-4 items-center"
                 >
-                    <Image width={50} height={50} alt={label} src={icon} className=""/>
+                    <Image width={48} height={48} alt={label} src={icon} className="w-12 h-12"/>
                     <p>{label} </p>
                 </Link>
             ))}
