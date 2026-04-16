@@ -15,7 +15,7 @@ export default function Footer() {
         updateYear();
     }, []);
     return (
-        <footer className="border-t-2 border-secondary text-xs text-gray-600 p-4 flex lg:flex-row flex-col justify-around gap-8 items-center lg:text-start text-center [&_div]:w-80 tracking-wide">
+        <footer className="border-t-2 border-secondary text-xs text-gray-600 p-4 flex lg:flex-row flex-col justify-around gap-8 items-center lg:text-start text-center [&_div]:max-w-80 tracking-wide">
             <Logo height={200} width={200} img={logoFooter} priority={false} />
             <div>
                 <p className="text-gray-700 font-semibold">
