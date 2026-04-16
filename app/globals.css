@@ -59,6 +59,10 @@ body, html {
         @apply rounded p-4 shadow-md border bg-neutral-50
     }
 
+    .document-style {
+        @apply [&_a]:underline break-all flex flex-col gap-4
+    }
+
     p {
         font-family: var(--font-opensans);
     }
