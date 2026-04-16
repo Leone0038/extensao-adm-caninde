@@ -17,7 +17,7 @@ export default function BreadCrumbs({ projectName }: BreadCrumbsProps) {
         trabalhos: "Trabalhos científicos",
     };
     return (
-        <nav className="pb-8 font-medium">
+        <nav className="pb-8 font-medium text-center">
             <ol className="flex sm:flex-row flex-col text-lg items-center gap-2">
                 <li>
                     <Link href="/">Início</Link>
