@@ -11,11 +11,11 @@ export default async function SlideShowPage({
     const { index } = await searchParams;
     const { photos } = await getSingleProject(id);
     return (
-        <main className="flex flex-col items-center justify-start gap-2 flex-1 pt-20">
+        <main className="flex flex-col items-center gap-2 flex-1 p-8">
             <CommonLink
                 href={`/projetos/fotos/${id}`}
                 label="Voltar"
-                styles="self-center w-40"
+                styles="self-center w-30 text-xl"
             />
             <SlideShow photoIndex={index} photos={photos} />
         </main>
