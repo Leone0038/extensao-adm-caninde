@@ -1,0 +1,38 @@
+import { ProjectMenuOptions, ProjectMenuProps } from "@/types";
+import Link from "next/link";
+import Image from "next/image";
+import cameraIcon from "@/assets/camera.svg";
+import videoIcon from "@/assets/video.svg";
+import cartIcon from "@/assets/cart.svg";
+import docIcon from "@/assets/doc.svg";
+
+const projectMenuOptions: ProjectMenuOptions[] = [
+    { label: "Fotografias", icon: cameraIcon, href: "/projetos/fotos/" },
+    { label: "Videos", icon: videoIcon, href: "/projetos/videos/" },
+    {
+        label: "Produtos da ação",
+        icon: cartIcon,
+        href: "/projetos/resultados/",
+    },
+    {
+        label: "Trabalhos científicos",
+        icon: docIcon,
+        href: "/projetos/trabalhos/",
+    },
+];
+export default function ProjectMenu({ id }: ProjectMenuProps) {
+    return (
+        <section className="p-4 text-text-primary flex flex-col gap-4 font-bold">
+            {projectMenuOptions.map(({ icon, label, href }, i) => (
+                <Link
+                    key={i}
+                    href={`${href}${id}`}
+                    className="bg-secondary p-4 flex gap-4 items-center"
+                >
+                    <Image width={50} height={50} alt={label} src={icon} className=""/>
+                    <p>{label} </p>
+                </Link>
+            ))}
+        </section>
+    );
+}
