@@ -1,4 +1,3 @@
-
 import Title from "@/components/Title";
 import { getSingleProject } from "@/lib/contentful";
 import { SingleProjectPageParams } from "@/types";
@@ -9,6 +8,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import ProjectMenu from "@/components/ProjectMenu";
 import BreadCrumbs from "@/components/BreadCrumbs";
+import Logo from "@/components/Logo";
+import { cleanUrl } from "@/lib/utils";
 
 // const socialMediaLinks: SocialMediaLinks[] = [
 //     { href: "/", icon: fbIcon, alt: "Ícone do Facebook" },
@@ -22,12 +23,22 @@ export default async function SingleProjectPage({
     params,
 }: SingleProjectPageParams) {
     const { id } = await params;
-    const { bursers, coordinator, summary, title, year } =
+    const { bursers, coordinator, summary, title, year, logo } =
         await getSingleProject(id);
-
+    const logoUrl = logo?.fields.file.url;
     return (
         <main className="flex flex-col">
-            <BreadCrumbs projectName={title} year={year}/>
+            <BreadCrumbs projectName={title} year={year} />
+            {logoUrl && (
+                <Logo
+                    width={200}
+                    height={200}
+                    alt={`Logo do projeto: ${title}`}
+                    img={cleanUrl(logoUrl)}
+                    styles="p-4"
+                    priority={true}
+                />
+            )}
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-12">
                 <section className="lg:col-span-2 flex flex-col items-start gap-4">
                     <Title text={title + " (" + year + ")"} />
