@@ -65,11 +65,13 @@ export interface NavLink {
 }
 
 export interface LogoProps {
-    img: StaticImageData;
+    img: StaticImageData | string;
     width: number;
     height: number;
     priority: boolean;
     styles?: string;
+    alt: string
+    parentStyles?: string
 }
 
 export interface NewsCardProps {
@@ -138,6 +140,7 @@ export interface Project {
     videos: Document;
     scientificWorks: Document;
     results: Document;
+    logo: {fields: {file: {url: string}}}
 }
 
 
@@ -204,3 +207,4 @@ export interface ExtensionProjectsLinkProps {
     href: string;
     label: string
 }
+
