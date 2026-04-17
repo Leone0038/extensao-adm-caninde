@@ -11,6 +11,7 @@ export default function Header() {
                     width={300}
                     img={logoHeader}
                     priority={true}
+                    alt="Logo cabeçalho"
                 />
             </div>
             <h2 className="px-8 sm:text-2xl text-xl font-bold text-amber-50">
