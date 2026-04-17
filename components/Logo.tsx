@@ -1,6 +1,5 @@
 import { LogoProps } from "@/types";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Logo({
     img,
@@ -8,17 +7,19 @@ export default function Logo({
     height,
     priority,
     styles,
+    alt,
+    parentStyles
 }: LogoProps) {
     return (
-        <Link href="/">
+        <div className={parentStyles}>
             <Image
                 src={img}
-                alt="Logo"
+                alt={alt}
                 priority={priority}
                 width={width}
                 height={height}
                 className={`w-auto h-auto shrink-0 ${styles}`}
             />
-        </Link>
+        </div>
     );
 }
