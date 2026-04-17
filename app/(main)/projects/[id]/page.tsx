@@ -27,7 +27,7 @@ export default async function SingleProjectPage({
 
     return (
         <main className="flex flex-col">
-            <BreadCrumbs projectName={title} />
+            <BreadCrumbs projectName={title} year={year}/>
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-12">
                 <section className="lg:col-span-2 flex flex-col items-start gap-4">
                     <Title text={title + " (" + year + ")"} />
