@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
                 source: "/noticias",
                 destination: "/news",
             },
-     
+
             {
                 source: "/sobre",
                 destination: "/about",
@@ -25,19 +25,19 @@ const nextConfig: NextConfig = {
                 source: "/projetos/:id",
                 destination: "/projects/:id",
             },
-              {
+            {
                 source: "/projetos/fotos/:id",
                 destination: "/projects/photos/:id",
             },
-              {
+            {
                 source: "/projetos/videos/:id",
                 destination: "/projects/videos/:id",
             },
-             {
+            {
                 source: "/projetos/trabalhos/:id",
                 destination: "/projects/scientific-works/:id",
             },
-             {
+            {
                 source: "/projetos/resultados/:id",
                 destination: "/projects/results/:id",
             },
@@ -45,7 +45,14 @@ const nextConfig: NextConfig = {
                 source: "/projetos/slideshow/:id",
                 destination: "/projects/slideshow/:id",
             },
-           
+            {
+                source: "/projetos-lista-2025",
+                destination: "/projects-list-2025",
+            },
+            {
+                source: "/projetos-lista-2026",
+                destination: "/projects-list-2026",
+            },
         ];
     },
     images: {
