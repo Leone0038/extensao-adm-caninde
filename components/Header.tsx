@@ -4,11 +4,11 @@ import Logo from "./Logo";
 
 export default function Header() {
     return (
-        <header className="text-center bg-linear-to-r from-tertiary via-secondary to-primary h-100 flex lg:flex-row flex-col items-center justify-center">
+        <header className="text-center bg-linear-to-r from-tertiary via-secondary to-primary h-70 flex lg:flex-row flex-col items-center justify-center">
             <div className="lg:border-r border-gray-300">
                 <Logo
-                    height={400}
-                    width={400}
+                    height={300}
+                    width={300}
                     img={logoHeader}
                     priority={true}
                 />
