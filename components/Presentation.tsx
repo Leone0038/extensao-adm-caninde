@@ -1,5 +1,4 @@
-import Logo from "./Logo";
-import projectsLogo from "@/assets/projects-logo.webp";
+
 
 export default function Presentation() {
     return (
@@ -58,12 +57,6 @@ export default function Presentation() {
                     de memória e canal de comunicação com a sociedade.
                 </p>
             </div>
-            <Logo
-                width={500}
-                height={500}
-                img={projectsLogo}
-                priority={false}
-            />
         </article>
     );
 }
