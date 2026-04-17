@@ -1,5 +1,6 @@
 import BreadCrumbs from "@/components/BreadCrumbs";
 import { getProjects } from "@/lib/contentful";
+import { Project, ProjectTitle } from "@/types";
 import Link from "next/link";
 
 export default async function ProjectsList2025Page() {
