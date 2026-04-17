@@ -1,6 +1,4 @@
-import { getProjects } from "@/lib/contentful";
-import { Project, ProjectTitle } from "@/types";
-import Link from "next/link";
+
 import ExtensionProjectsLink from "./ExtensionProjectsLink";
 
 export default async function SideMenu() {
