@@ -16,7 +16,7 @@ export default function Footer() {
     }, []);
     return (
         <footer className="border-t-2 border-secondary text-xs text-gray-600 p-4 flex lg:flex-row flex-col justify-around gap-8 items-center lg:text-start text-center [&_div]:max-w-80 tracking-wide">
-            <Logo height={200} width={200} img={logoFooter} priority={false} />
+            <Logo height={200} width={200} img={logoFooter} priority={false} alt="Logo rodapé"/>
             <div>
                 <p className="text-gray-700 font-semibold">
                     © {year} – FACULDADE DE EDUCAÇÃO E CIÊNCIAS INTEGRADAS DO
