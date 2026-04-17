@@ -197,4 +197,10 @@ export interface PaginationProps {
 export interface BreadCrumbsProps {
     projectName?: string;
     id?: string
+    year?: number
+}
+
+export interface ExtensionProjectsLinkProps {
+    href: string;
+    label: string
 }
