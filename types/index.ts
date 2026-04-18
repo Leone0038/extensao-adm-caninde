@@ -3,18 +3,18 @@ import { Entry, EntrySkeletonType } from "contentful";
 import { StaticImageData } from "next/image";
 
 export interface ProjectMenuProps {
-    id: string
+    id: string;
 }
 
 export interface ProjectMenuOptions {
-    href: string
-    label: string
-    icon: string
+    href: string;
+    label: string;
+    icon: string;
 }
 
 export interface ProjectSubPageProps {
-    searchParams: Promise<{index: number}>
-    params: Promise<{id: string}>
+    searchParams: Promise<{ index: number }>;
+    params: Promise<{ id: string }>;
 }
 
 export interface SlideShowProps {
@@ -26,7 +26,6 @@ export interface SlideShowProps {
             };
         };
     }[];
-    
 }
 
 export interface SocialMediaLinks {
@@ -70,8 +69,8 @@ export interface LogoProps {
     height: number;
     priority: boolean;
     styles?: string;
-    alt: string
-    parentStyles?: string
+    alt: string;
+    parentStyles?: string;
 }
 
 export interface NewsCardProps {
@@ -107,6 +106,7 @@ export interface DashBoardCounter {
 export interface PhotoCardProps {
     photoUrl: string;
     index: number;
+    openModal: (index: number) => void;
 }
 
 export interface PhotoListProps {
@@ -116,7 +116,6 @@ export interface PhotoListProps {
 export interface VideoLinkProps {
     videoLinks: Document;
 }
-
 
 export interface NoItemsNoticeProps {
     text: string;
@@ -140,9 +139,8 @@ export interface Project {
     videos: Document;
     scientificWorks: Document;
     results: Document;
-    logo: {fields: {file: {url: string}}}
+    logo: { fields: { file: { url: string } } };
 }
-
 
 export interface ProjectCardListProps {
     projects: Entry<EntrySkeletonType, undefined, string>[];
@@ -199,12 +197,23 @@ export interface PaginationProps {
 
 export interface BreadCrumbsProps {
     projectName?: string;
-    id?: string
-    year?: number
+    id?: string;
+    year?: number;
 }
 
 export interface ExtensionProjectsLinkProps {
     href: string;
-    label: string
+    label: string;
 }
 
+export interface ModalProps {
+    currentPhotoIndex: number;
+    photos: {
+        fields: {
+            file: {
+                url: string;
+            };
+        };
+    }[];
+    closeModal: () => void;
+}
