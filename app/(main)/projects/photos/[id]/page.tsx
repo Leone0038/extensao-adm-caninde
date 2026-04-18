@@ -7,7 +7,7 @@ export default async function PhotosPage({ params }: ProjectSubPageProps) {
     const { id } = await params;
     const { photos, title } = await getSingleProject(id);
     return (
-        <main className="page-common-styles">
+        <main className="flex-1">
            
             <BreadCrumbs projectName={title}/>
             <PhotoList photos={photos} />
