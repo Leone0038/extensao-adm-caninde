@@ -8,10 +8,10 @@ import Link from "next/link";
 
 export default async function Home() {
     return (
-        <main className="flex flex-col sm:items-start items-center gap-8">
+        <main className="flex-1 flex flex-col sm:items-start items-center gap-8">
             <Title text="Últimas notícias" />
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-12 mb-10 w-full">
-                <Link href={"/sobre"} className="lg:col-span-2">
+            <div className="grid lg:grid-cols-4 grid-cols-1 gap-12 mb-10 w-full">
+                <Link href={"/sobre"} className="lg:col-span-3">
                     <Image
                         width={1024}
                         height={1024}
