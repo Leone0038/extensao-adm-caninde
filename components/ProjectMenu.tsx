@@ -29,7 +29,7 @@ export default function ProjectMenu({ id }: ProjectMenuProps) {
                     href={`${href}${id}`}
                     className="flex gap-4 items-center secondary-style"
                 >
-                    <Image width={48} height={48} alt={label} src={icon} className="w-12 h-12"/>
+                    <Image width={48} height={48} alt={label} src={icon} className="w-12 h-12" priority={i < 3} />
                     <p>{label} </p>
                 </Link>
             ))}
