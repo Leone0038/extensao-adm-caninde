@@ -24,15 +24,17 @@ export default function Modal({
     };
 
     return (
-        <section className="fixed inset-0 backdrop-blur-lg bg-black/70 p-4 pointer-events-none">
-            <div className="relative w-full h-full">
-                <Image
-                    fill
-                    src={cleanUrl(photos[currentIndex].fields.file.url)}
-                    alt={`Foto #${currentPhotoIndex}`}
-                    className="object-contain"
-                    sizes="(max-width: 1280px) 80vw, (max-width: 768px) 100vw"
-                />
+        <section className="fixed inset-0 bg-black/50 p-8 pointer-events-none">
+            <div className="relative w-full h-full bg-black/70 backdrop-blur-lg">
+                <div className="relative w-full h-full">
+                    <Image
+                        fill
+                        src={cleanUrl(photos[currentIndex].fields.file.url)}
+                        alt={`Foto #${currentPhotoIndex}`}
+                        className="object-contain"
+                        sizes="(max-width: 1280px) 80vw, (max-width: 768px) 100vw"
+                    />
+                </div>
                 <button
                     type="button"
                     onClick={closeModal}
@@ -45,32 +47,32 @@ export default function Modal({
                         src={closeIcon}
                     />
                 </button>
-            </div>
-            <div className="absolute inset-0 flex items-center justify-between [&_button]:cursor-pointer">
-                <button
-                    type="button"
-                    onClick={prevPhoto}
-                    className={`${currentIndex === 0 && "invisible"} pointer-events-auto transition-transform duration-300 hover:scale-110`}
-                >
-                    <Image
-                        width={100}
-                        height={100}
-                        alt="Foto anterior"
-                        src={arrowBackward}
-                    />
-                </button>
-                <button
-                    type="button"
-                    onClick={nextPhoto}
-                    className={`${currentIndex === photos.length - 1 && "invisible"} pointer-events-auto transition-transform duration-300 hover:scale-110`}
-                >
-                    <Image
-                        width={100}
-                        height={100}
-                        alt="Próxima foto"
-                        src={arrowForward}
-                    />
-                </button>
+                <div className="absolute inset-0 flex items-center justify-between [&_button]:cursor-pointer">
+                    <button
+                        type="button"
+                        onClick={prevPhoto}
+                        className={`${currentIndex === 0 && "invisible"} pointer-events-auto transition-transform duration-300 hover:scale-110`}
+                    >
+                        <Image
+                            width={100}
+                            height={100}
+                            alt="Foto anterior"
+                            src={arrowBackward}
+                        />
+                    </button>
+                    <button
+                        type="button"
+                        onClick={nextPhoto}
+                        className={`${currentIndex === photos.length - 1 && "invisible"} pointer-events-auto transition-transform duration-300 hover:scale-110`}
+                    >
+                        <Image
+                            width={100}
+                            height={100}
+                            alt="Próxima foto"
+                            src={arrowForward}
+                        />
+                    </button>
+                </div>
             </div>
         </section>
     );
