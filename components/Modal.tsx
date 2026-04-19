@@ -25,7 +25,7 @@ export default function Modal({
 
     return (
         <section className="fixed inset-0 backdrop-blur-lg bg-black/70 p-4 pointer-events-none">
-            <div className="relative w-full h-full pointer-events-none">
+            <div className="relative w-full h-full">
                 <Image
                     fill
                     src={cleanUrl(photos[currentIndex].fields.file.url)}
@@ -41,7 +41,7 @@ export default function Modal({
                     <Image
                         width={40}
                         height={40}
-                        alt="Fechar modal"
+                        alt="Ícone de fechamento do modal"
                         src={closeIcon}
                     />
                 </button>
@@ -50,7 +50,7 @@ export default function Modal({
                 <button
                     type="button"
                     onClick={prevPhoto}
-                    className={`${currentIndex === 0 && "invisible"} pointer-events-auto`}
+                    className={`${currentIndex === 0 && "invisible"} pointer-events-auto transition-transform duration-300 hover:scale-110`}
                 >
                     <Image
                         width={100}
@@ -62,7 +62,7 @@ export default function Modal({
                 <button
                     type="button"
                     onClick={nextPhoto}
-                    className={`${currentIndex === photos.length - 1 && "invisible"} pointer-events-auto`}
+                    className={`${currentIndex === photos.length - 1 && "invisible"} pointer-events-auto transition-transform duration-300 hover:scale-110`}
                 >
                     <Image
                         width={100}
