@@ -96,13 +96,6 @@ export interface TitleProps {
     text: string;
     styles?: string;
 }
-
-export interface DashBoardCounter {
-    membersServedAmount: number;
-    completedCoursesAmount: number;
-    impactedMunicipalitiesAmount: number;
-}
-
 export interface PhotoCardProps {
     photoUrl: string;
     index: number;
@@ -117,14 +110,19 @@ export interface VideoLinkProps {
     videoLinks: Document;
 }
 
+export interface VideoListProps {
+    videos: { fields: { file: { url: string } } }[];
+}
+
+export interface VideCardProps {
+    videoUrl: string
+}
+
 export interface NoItemsNoticeProps {
     text: string;
 }
 
-export interface AboutInfoCardProps {
-    children?: React.ReactNode;
-    title: string;
-}
+
 export interface ScientificWorkContainerProps {
     scientificWorks: Document;
 }
@@ -136,15 +134,13 @@ export interface Project {
     coordinator: string;
     year: number;
     photos: { fields: { file: { url: string } } }[];
-    videos: Document;
+    videos: { fields: { file: { url: string } } }[];
     scientificWorks: Document;
     results: Document;
     logo: { fields: { file: { url: string } } };
+    videoLinks: Document
 }
 
-export interface ProjectCardListProps {
-    projects: Entry<EntrySkeletonType, undefined, string>[];
-}
 
 export interface ProjectTitle {
     title: string;
@@ -159,36 +155,7 @@ export interface ProjectResultCardProps {
     results: Document;
 }
 
-export interface CourseCardProps {
-    courseName: string;
-    description: string;
-    image: { fields: { file: { url: string } } };
-    index: number;
-}
 
-export interface CourseCardListProps {
-    courses: Entry<EntrySkeletonType, undefined, string>[];
-}
-
-export interface WorkShopCardProps {
-    workshopName: string;
-    description: string;
-    image: { fields: { file: { url: string } } };
-    index: number;
-}
-
-export interface WorkShopCardListProps {
-    workshops: Entry<EntrySkeletonType, undefined, string>[];
-}
-
-export interface TopScholarshipRecipientCardProps {
-    name: string;
-    description: string;
-}
-
-export interface TopScholarshipRecipientCardListProps {
-    topScholarshipRecipients: Entry<EntrySkeletonType, undefined, string>[];
-}
 
 export interface PaginationProps {
     totalPages: number;
