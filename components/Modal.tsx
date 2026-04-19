@@ -24,55 +24,53 @@ export default function Modal({
     };
 
     return (
-        <section className="bg-black/50 fixed z-50 inset-0 flex justify-center items-center p-4">
-            <div className="backdrop-blur-lg bg-black/70 w-200 h-200 pointer-events-none">
-                <div className="relative w-full h-full">
+        <section className="fixed inset-0 backdrop-blur-lg bg-black/70 p-4 pointer-events-none">
+            <div className="relative w-full h-full pointer-events-none">
+                <Image
+                    fill
+                    src={cleanUrl(photos[currentIndex].fields.file.url)}
+                    alt={`Foto #${currentPhotoIndex}`}
+                    className="object-contain"
+                    sizes="(max-width: 1280px) 80vw, (max-width: 768px) 100vw"
+                />
+                <button
+                    type="button"
+                    onClick={closeModal}
+                    className={`absolute -top-2 -right-2 cursor-pointer pointer-events-auto`}
+                >
                     <Image
-                        fill
-                        src={cleanUrl(photos[currentIndex].fields.file.url)}
-                        alt={`Foto #${currentPhotoIndex}`}
-                        className="object-contain"
-                        sizes="(max-width: 1280px) 80vw, (max-width: 768px) 100vw"
+                        width={40}
+                        height={40}
+                        alt="Fechar modal"
+                        src={closeIcon}
                     />
-                    <button
-                        type="button"
-                        onClick={closeModal}
-                        className={`absolute -top-4 -right-4 cursor-pointer pointer-events-auto`}
-                    >
-                        <Image
-                            width={30}
-                            height={30}
-                            alt="Fechar modal"
-                            src={closeIcon}
-                        />
-                    </button>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-between [&_button]:cursor-pointer">
-                    <button
-                        type="button"
-                        onClick={prevPhoto}
-                        className={`${currentIndex === 0 && "invisible"} pointer-events-auto transition-transform duration-300 hover:scale-110`}
-                    >
-                        <Image
-                            width={100}
-                            height={100}
-                            alt="Foto anterior"
-                            src={arrowBackward}
-                        />
-                    </button>
-                    <button
-                        type="button"
-                        onClick={nextPhoto}
-                        className={`${currentIndex === photos.length - 1 && "invisible"} pointer-events-auto transition-transform duration-300 hover:scale-110`}
-                    >
-                        <Image
-                            width={100}
-                            height={100}
-                            alt="Próxima foto"
-                            src={arrowForward}
-                        />
-                    </button>
-                </div>
+                </button>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-between [&_button]:cursor-pointer">
+                <button
+                    type="button"
+                    onClick={prevPhoto}
+                    className={`${currentIndex === 0 && "invisible"} pointer-events-auto`}
+                >
+                    <Image
+                        width={100}
+                        height={100}
+                        alt="Foto anterior"
+                        src={arrowBackward}
+                    />
+                </button>
+                <button
+                    type="button"
+                    onClick={nextPhoto}
+                    className={`${currentIndex === photos.length - 1 && "invisible"} pointer-events-auto`}
+                >
+                    <Image
+                        width={100}
+                        height={100}
+                        alt="Próxima foto"
+                        src={arrowForward}
+                    />
+                </button>
             </div>
         </section>
     );
