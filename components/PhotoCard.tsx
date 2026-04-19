@@ -18,7 +18,7 @@ export default function PhotoCard({
                 onClick={() => openModal(index)}
                 alt={"Foto do projeto"}
                 className="object-cover rounded aspect-square cursor-pointer"
-                sizes="100vw"
+                sizes="(max-width: 1280px) 80vw, (max-width: 768px) 100vw"
             />
         </li>
     );
