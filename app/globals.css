@@ -45,7 +45,7 @@ body, html {
     }
 
     .grid-common-styles {
-        @apply grid xl:grid-cols-5 gap-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1;
+        @apply grid xl:grid-cols-5 gap-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 m-4;
     }
     .flex-col-common-styles {
         @apply flex flex-col gap-4 items-center text-center;
