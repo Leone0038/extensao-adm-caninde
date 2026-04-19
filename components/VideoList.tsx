@@ -1,16 +1,18 @@
-// import { VideoListProps } from "@/types";
-// import VideoCard from "./VideoLinks";
-// import NoItemsNotice from "./NoItemsNotice";
+import { VideoListProps } from "@/types";
+import VideoCard from "./VideoCard";
+import NoItemsNotice from "./NoItemsNotice";
+import { cleanUrl } from "@/lib/utils";
 
-// export default function VideoList({ videos }: VideoListProps) {
-//     let processedVideos;
-//     if (videos) {
-//         processedVideos = videos.map((video, i) => (
-//             <VideoCard videoUrl={video.fields.file.url} key={i} />
-//         ));
-//     } else {
-//         processedVideos = <NoItemsNotice text="Nenhum vídeo postado ainda" />;
-//     }
+export default function VideoList({ videos }: VideoListProps) {
+    if (!videos || videos.length === 0) {
+        return <NoItemsNotice text="Nenhum vídeo postado ainda" />;
+    }
 
-//     return <ul className="grid-common-styles mx-4">{processedVideos}</ul>;
-// }
+    return (
+        <ul className="grid-common-styles">
+            {videos.map((video, i) => (
+                <VideoCard key={i} videoUrl={cleanUrl(video.fields.file.url)}/>
+            ))}
+        </ul>
+    );
+}
