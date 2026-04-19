@@ -16,7 +16,7 @@ export default function PhotoList({ photos }: PhotoListProps) {
 
     return (
         <>
-            <ul className="grid-common-styles mx-4">
+            <ul className="grid-common-styles">
                 {photos.map((photo, i) => (
                     <PhotoCard
                         key={i}
