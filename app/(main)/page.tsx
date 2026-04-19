@@ -18,7 +18,7 @@ export default async function Home() {
                         alt="Notícias"
                         src={newsImage}
                         className="w-full h-full"
-                        priority
+                        priority={true}
                     />
                 </Link>
                 <SideMenu />
