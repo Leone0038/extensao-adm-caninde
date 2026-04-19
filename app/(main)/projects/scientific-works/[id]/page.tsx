@@ -9,7 +9,7 @@ export default async function ScientificWorksPage({
     const { id } = await params;
     const { scientificWorks, title } = await getSingleProject(id);
     return (
-        <main className="page-common-styles">
+        <main className="flex-1">
          <BreadCrumbs projectName={title} />
             <ScientificWorkContainer scientificWorks={scientificWorks} />
         </main>

@@ -7,7 +7,7 @@ export default async function VideosPage({ params }: ProjectSubPageProps) {
     const { id } = await params;
     const { videos , title} = await getSingleProject(id);
     return (
-        <main className="page-common-styles">
+        <main className="flex-1">
             <BreadCrumbs projectName={title} />
             <VideoLinks videoLinks={videos} />
         </main>

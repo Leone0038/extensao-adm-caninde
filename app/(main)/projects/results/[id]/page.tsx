@@ -9,7 +9,7 @@ export default async function ProjectResultsPage({
     const { id } = await params;
     const { results, title } = await getSingleProject(id);
     return (
-        <main className="page-common-styles">
+        <main className="flex-1">
             <BreadCrumbs projectName={title} />
             <ProjectResultCard results={results} />
         </main>
