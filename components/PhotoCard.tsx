@@ -14,7 +14,7 @@ export default function PhotoCard({
             <Image
                 fill
                 src={imageUrl}
-                priority={index < 4}
+                priority={index < 10}
                 onClick={() => openModal(index)}
                 alt={"Foto do projeto"}
                 className="object-cover rounded aspect-square cursor-pointer"
