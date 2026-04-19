@@ -4,7 +4,7 @@ import NoItemsNotice from "./NoItemsNotice";
 
 export default function VideoLinks({ videoLinks }: VideoLinkProps) {
      if (!videoLinks) {
-                return <NoItemsNotice text="Nenhum vídeo postado ainda" />
+                return <NoItemsNotice text="Nenhum link externo de vídeo postado ainda" />
             }
     return (
         <div className="document-style text-bg">
