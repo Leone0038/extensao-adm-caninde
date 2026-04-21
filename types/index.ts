@@ -73,24 +73,6 @@ export interface LogoProps {
     parentStyles?: string;
 }
 
-export interface NewsCardProps {
-    title: string;
-    newsText: Document;
-    image: { fields: { file: { url: string } } };
-    index: number;
-    author: string;
-    createdAt: string;
-}
-
-export interface NewsListProps {
-    news: Entry<EntrySkeletonType, undefined, string>[];
-}
-
-export type FilterType = "latest" | "oldest";
-
-export interface NewsPageSearchParams {
-    searchParams: Promise<{ search: string; filter: FilterType; page: number }>;
-}
 
 export interface TitleProps {
     text: string;
