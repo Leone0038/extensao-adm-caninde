@@ -27,7 +27,7 @@ export default async function SingleProjectPage({
         await getSingleProject(id);
     const logoUrl = logo?.fields.file.url;
     return (
-        <main className="flex flex-col">
+        <main className="flex flex-1 flex-col">
             <BreadCrumbs projectName={title} year={year} />
             {logoUrl && (
                 <Logo
