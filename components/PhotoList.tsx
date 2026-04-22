@@ -20,6 +20,7 @@ export default function PhotoList({ photos }: PhotoListProps) {
                 {photos.map((photo, i) => (
                     <PhotoCard
                         key={i}
+                        description={photo.fields.description}
                         photoUrl={photo.fields.file.url}
                         index={i}
                         openModal={(idx) => {
