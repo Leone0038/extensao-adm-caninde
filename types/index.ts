@@ -81,11 +81,12 @@ export interface TitleProps {
 export interface PhotoCardProps {
     photoUrl: string;
     index: number;
+    description: string
     openModal: (index: number) => void;
 }
 
 export interface PhotoListProps {
-    photos: { fields: { file: { url: string } } }[];
+    photos: { fields: { file: { url: string }, description: string } }[];
 }
 
 export interface VideoLinkProps {
