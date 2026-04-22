@@ -116,7 +116,7 @@ export interface Project {
     bursers: Document;
     coordinator: string;
     year: number;
-    photos: { fields: { file: { url: string } } }[];
+    photos: { fields: { file: { url: string }, description: string } }[];
     videos: { fields: { file: { url: string } } }[];
     scientificWorks: Document;
     results: Document;
