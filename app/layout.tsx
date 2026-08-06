@@ -27,7 +27,7 @@ export default function RootLayout({
     return (
         <html
             lang="pt-BR"
-            className="scroll-smooth antialiased"
+            className={`scroll-smooth antialiased ${montserrat.variable} ${opensans.variable}`}
             data-scroll-behavior="smooth"
         >
             <body className="leading-normal min-h-dvh flex flex-col">
